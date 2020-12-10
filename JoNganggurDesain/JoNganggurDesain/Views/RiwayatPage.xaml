@@ -4,33 +4,44 @@
              x:Class="JoNganggurDesain.Views.RiwayatPage">
     <Grid>
         <ScrollView>
-            <RelativeLayout BackgroundColor="#169CC3" >
-                <Frame  BackgroundColor="White"
-                        CornerRadius="20"
-                        Opacity="0.3"
-                        RelativeLayout.WidthConstraint="350"
-                        RelativeLayout.HeightConstraint="800"
-                        RelativeLayout.XConstraint="30"
-                        RelativeLayout.YConstraint="90">
+            <StackLayout VerticalOptions="FillAndExpand">
+                
+                <!-- Box Riwayat -->
+
+                <RelativeLayout BackgroundColor="#169CC3" >
+
+                        <Label Text="Riwayat" Margin="20,20,0,0" TextColor="White" FontAttributes="Bold" FontSize="Large"/>
                     
-                </Frame>
-
-                <Label Text="Riwayat" Margin="20,20,0,0" TextColor="White" FontAttributes="Bold" FontSize="Large"/>
-
-                <Frame BackgroundColor="White"
-                CornerRadius="20"
-                RelativeLayout.WidthConstraint="200"
-                RelativeLayout.HeightConstraint="120"
-                RelativeLayout.XConstraint="40"
-                RelativeLayout.YConstraint="110">
-                    <Frame.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="Riwayat"/>
-                    </Frame.GestureRecognizers>
-
-                </Frame>
-
-            </RelativeLayout>
+                        <Frame BackgroundColor="White"
+                            CornerRadius="20"
+                            RelativeLayout.WidthConstraint="330"
+                            RelativeLayout.HeightConstraint="100"
+                            RelativeLayout.XConstraint="40"
+                            RelativeLayout.YConstraint="110">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="Test"/>
+                            </Frame.GestureRecognizers>
+                            <RelativeLayout>
+                                <Label Text="PT Asd" Margin="1,2,0,0"
+                                       TextColor="Black"
+                                       FontAttributes="Bold" FontSize="Subtitle"/>
+                                <Label Text="Asisten Rumah Tangga" Margin="1,2,0,0"
+                                       TextColor="Black" FontSize="Small"
+                                       RelativeLayout.YConstraint="40"/>
+                                <Label Text="Sedang bekerja" Margin="0,0,2,2" 
+                                       TextColor="Green" FontSize="Subtitle"
+                                       FontAttributes="Bold"
+                                       RelativeLayout.XConstraint="170" RelativeLayout.YConstraint="20"/>
+                            </RelativeLayout>
+                
+                        </Frame>
+                        
+                </RelativeLayout>
+            </StackLayout>
+            
         </ScrollView>
+        
+        <!-- Navigation -->
 
         <Button Grid.Row="0" TextColor="White"
                 Text="Profile"

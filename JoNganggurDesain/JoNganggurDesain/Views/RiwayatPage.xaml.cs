@@ -16,5 +16,10 @@ namespace JoNganggurDesain.Views
         {
             InitializeComponent();
         }
+
+        void Test(object sender, EventArgs e)
+        {
+            DisplayAlert("asd", "zxc", "qwe");
+        }
     }
 }
