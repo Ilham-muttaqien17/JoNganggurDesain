@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="JoNganggurDesain.Views.LoginPage">
+    
+    <RelativeLayout x:Name="MasterLayout" BackgroundColor="#169CC3" >
+        
+        <Image Source="Logo"             
+               HeightRequest="90"
+               WidthRequest="90"
+               RelativeLayout.XConstraint="155"
+               RelativeLayout.YConstraint="60"/>
+
+        <Button Text="Masuk"
+                TextColor="White"
+                    CornerRadius="25"
+                    RelativeLayout.XConstraint="60"
+                    RelativeLayout.YConstraint="175"                    
+                    RelativeLayout.WidthConstraint="125"
+                    RelativeLayout.HeightConstraint="50"
+                    BackgroundColor="#55DEBD"/>
+
+        <Button Text="Daftar" 
+                TextColor="White"
+                CornerRadius="25"
+                RelativeLayout.XConstraint="220"
+                RelativeLayout.YConstraint="175"
+                RelativeLayout.WidthConstraint="125"
+                RelativeLayout.HeightConstraint="50"
+                BackgroundColor="#C4C4C4"/>
+
+
+        <Frame BackgroundColor="White"
+                 CornerRadius="20"
+                     WidthRequest="260"
+                     HeightRequest="220"
+                     RelativeLayout.XConstraint="55"
+                     RelativeLayout.YConstraint="250">
+
+            <StackLayout x:Name="LoginEntry" Margin="10">
+                <ActivityIndicator x:Name="ActivitySpinner" Color="Red" IsRunning="True"/>
+                <Label x:Name="Lbl_Username" Text="Username" TextColor="#0D9876"/>
+                <Entry x:Name="Entry_Username" Placeholder="Username"/>
+                <Label x:Name="Lbl_Password" Text="Password" TextColor="#0D9876"/>
+                <Entry x:Name="Entry_Password" Placeholder="Password" IsPassword="True"/>
+
+            </StackLayout>
+
+
+        </Frame>
+
+        <Button x:Name="Btn_Signin" Text="Masuk" 
+                TextColor="White"
+                CornerRadius="25"
+                RelativeLayout.XConstraint="140"
+                RelativeLayout.YConstraint="480"
+                RelativeLayout.WidthConstraint="125"
+                RelativeLayout.HeightConstraint="50"
+                BackgroundColor="#FD9500"
+                Clicked="SignInProcedure"/>
+
+
+    </RelativeLayout>
+</ContentPage>

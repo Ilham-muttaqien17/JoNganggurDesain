@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="JoNganggurDesain.Views.RegistrasiPage">
+    <ScrollView>
+        <RelativeLayout BackgroundColor="#169CC3">
+
+            <Image Source="Logo"             
+               HeightRequest="90"
+               WidthRequest="90"
+               RelativeLayout.XConstraint="155"
+               RelativeLayout.YConstraint="60"/>
+
+            <Button Text="Masuk"
+                TextColor="White"
+                    CornerRadius="25"
+                    RelativeLayout.XConstraint="60"
+                    RelativeLayout.YConstraint="175"                    
+                    RelativeLayout.WidthConstraint="125"
+                    RelativeLayout.HeightConstraint="50"
+                    BackgroundColor="#C4C4C4"/>
+
+            <Button Text="Daftar" 
+                TextColor="White"
+                CornerRadius="25"
+                RelativeLayout.XConstraint="220"
+                RelativeLayout.YConstraint="175"
+                RelativeLayout.WidthConstraint="125"
+                RelativeLayout.HeightConstraint="50"                
+                BackgroundColor="#55DEBD"/>
+
+
+            <!-- Frame register-->
+
+            <Frame BackgroundColor="White"
+                   Margin="0,0,0,30"
+                   CornerRadius="15"
+                   WidthRequest="300"
+                   HeightRequest="750"
+                   RelativeLayout.XConstraint="35"
+                   RelativeLayout.YConstraint="250">
+
+                <StackLayout>
+                    <Label Text="Nama depan" TextColor="#0D9876"/>
+                    <Entry Placeholder="Nama depan" />
+                    <Label Text="Nama belakang" TextColor="#0D9876"/>
+                    <Entry Placeholder="Nama belakang" />
+                    <Label Text="Username" TextColor="#0D9876"/>
+                    <Entry Placeholder="Username"  />
+                    <Label Text="Password" TextColor="#0D9876"/>
+                    <Entry Placeholder="Password" IsPassword="True" />
+                    <Label Text="Konfirmasi password" TextColor="#0D9876"/>
+                    <Entry Placeholder="Ketik ulang password" IsPassword="True"/>
+                    <Label Text="Tanggal lahir" TextColor="#0D9876"/>
+                    <DatePicker MinimumDate="01/01/1970" MaximumDate="01/01/2020" Date="01/01/2000"/>
+                    <Label Text="Email" TextColor="#0D9876"/>
+                    <Entry Placeholder="Email"/>
+                    <Label Text="Kontak" TextColor="#0D9876"/>
+                    <Entry Placeholder="Gunakan awalan 62" Keyboard="Numeric" />
+                    <Label Text="Deskripsi anda" TextColor="#0D9876"  />
+                    <Editor Placeholder="Deskripsi anda" AutoSize="TextChanges"/>
+
+                    <Button Text="Daftar" Margin="0,20,0,0"
+                            TextColor="White"
+                            CornerRadius="25"
+                            RelativeLayout.XConstraint="140"
+                            RelativeLayout.YConstraint="1000"
+                            RelativeLayout.WidthConstraint="125"
+                            RelativeLayout.HeightConstraint="50"
+                            BackgroundColor="#FD9500"/>
+                </StackLayout>
+
+
+            </Frame>
+
+
+
+        </RelativeLayout>
+    </ScrollView>
+</ContentPage>

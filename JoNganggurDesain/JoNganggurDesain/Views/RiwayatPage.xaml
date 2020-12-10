@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="JoNganggurDesain.Views.RiwayatPage">
+    <Grid>
+        <ScrollView>
+            <RelativeLayout BackgroundColor="#169CC3" >
+                <Frame  BackgroundColor="White"
+                        CornerRadius="20"
+                        Opacity="0.3"
+                        RelativeLayout.WidthConstraint="350"
+                        RelativeLayout.HeightConstraint="800"
+                        RelativeLayout.XConstraint="30"
+                        RelativeLayout.YConstraint="90">
+                    
+                </Frame>
+
+                <Label Text="Riwayat" Margin="20,20,0,0" TextColor="White" FontAttributes="Bold" FontSize="Large"/>
+
+                <Frame BackgroundColor="White"
+                CornerRadius="20"
+                RelativeLayout.WidthConstraint="200"
+                RelativeLayout.HeightConstraint="120"
+                RelativeLayout.XConstraint="40"
+                RelativeLayout.YConstraint="110">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Riwayat"/>
+                    </Frame.GestureRecognizers>
+
+                </Frame>
+
+            </RelativeLayout>
+        </ScrollView>
+
+        <Button Grid.Row="0" TextColor="White"
+                Text="Profile"
+                FontAttributes="Bold" 
+                BackgroundColor="#F84E29"  
+                HorizontalOptions="End" 
+                WidthRequest="120" 
+                HeightRequest="45" 
+                Margin="0,0,21,22" 
+                VerticalOptions="End"/>
+        <Button Grid.Row="0" TextColor="White"
+                Text="Riwayat"
+                FontAttributes="Bold" 
+                BackgroundColor="#F84E29"  
+                HorizontalOptions="End" 
+                WidthRequest="120" 
+                HeightRequest="45" 
+                Margin="0,0,143,22" 
+                VerticalOptions="End"/>
+        <Button Grid.Row="0" TextColor="White"
+                Text="Home"
+                FontAttributes="Bold" 
+                BackgroundColor="#F84E29"  
+                HorizontalOptions="End" 
+                WidthRequest="120" 
+                HeightRequest="45" 
+                Margin="0,0,266,22" 
+                VerticalOptions="End"/>
+
+    </Grid>
+</ContentPage>

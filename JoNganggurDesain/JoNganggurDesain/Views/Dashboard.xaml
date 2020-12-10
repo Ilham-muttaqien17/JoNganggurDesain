@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="JoNganggurDesain.Views.Dashboard">
+    <RelativeLayout BackgroundColor="#169CC3">
+       
+            <Frame BackgroundColor="White"
+                    CornerRadius="20"
+                    WidthRequest="372"
+                    HeightRequest="400"
+                    RelativeLayout.XConstraint="0"
+                    RelativeLayout.YConstraint="270">
+
+                           
+            </Frame>
+
+        <!-- Rekomendasi -->
+
+        <Label Text="Rekomendasi Lowongan" 
+               TextColor="White"
+               FontSize="18"
+               RelativeLayout.XConstraint="30"
+               RelativeLayout.YConstraint="80"/>
+
+        <Frame BackgroundColor="#17CA9E"
+                CornerRadius="20"
+                RelativeLayout.WidthConstraint="160"
+                RelativeLayout.HeightConstraint="120"
+                RelativeLayout.XConstraint="30"
+                RelativeLayout.YConstraint="110">
+            <Frame.GestureRecognizers>
+                <TapGestureRecognizer Tapped="Rekomendasi"/>
+            </Frame.GestureRecognizers>
+            
+        </Frame>
+
+        <Frame BackgroundColor="#17CA9E"
+                CornerRadius="20"
+                RelativeLayout.WidthConstraint="160"
+                RelativeLayout.HeightConstraint="120"
+                RelativeLayout.XConstraint="220"
+                RelativeLayout.YConstraint="110">
+            <Frame.GestureRecognizers>
+                <TapGestureRecognizer Tapped="Rekomendasi"/>
+            </Frame.GestureRecognizers>
+        </Frame>
+
+
+        <!-- Menu-menu -->
+
+        <Button 
+                ImageSource="map"
+                ContentLayout="Top,5"
+                Text="Lokasi"
+                TextColor="White"
+                CornerRadius="15"
+                RelativeLayout.XConstraint="60"
+                RelativeLayout.YConstraint="300"                    
+                RelativeLayout.WidthConstraint="120"
+                RelativeLayout.HeightConstraint="120"
+                BackgroundColor="#FD9500"/>
+        <Button 
+                ImageSource="list"
+                ContentLayout="Top,5"
+                Text="Lamaran"
+                TextColor="White"
+                CornerRadius="15"
+                RelativeLayout.XConstraint="60"
+                RelativeLayout.YConstraint="450"                    
+                RelativeLayout.WidthConstraint="120"
+                RelativeLayout.HeightConstraint="120"
+                BackgroundColor="#FD9500"/>
+        <Button 
+                ImageSource="bell"
+                ContentLayout="Top,5"
+                Text="Notifikasi"
+                TextColor="White"
+                CornerRadius="15"
+                RelativeLayout.XConstraint="230"
+                RelativeLayout.YConstraint="300"                    
+                RelativeLayout.WidthConstraint="120"
+                RelativeLayout.HeightConstraint="120"
+                BackgroundColor="#FD9500"/>
+        <Button 
+                ImageSource="globe"
+                ContentLayout="Top,5"
+                Text="Terbaru"
+                TextColor="White"
+                CornerRadius="15"
+                RelativeLayout.XConstraint="230"
+                RelativeLayout.YConstraint="450"                    
+                RelativeLayout.WidthConstraint="120"
+                RelativeLayout.HeightConstraint="120"
+                BackgroundColor="#FD9500"/>
+
+
+
+
+        <!-- Navigasi -->
+
+        <Button 
+                Text="Home"
+                TextColor="White"
+                RelativeLayout.XConstraint="25"
+                RelativeLayout.YConstraint="600"
+                RelativeLayout.WidthConstraint="120"
+                RelativeLayout.HeightConstraint="45"
+                BackgroundColor="#F84E29"/>
+        <Button 
+                Text="Riwayat"
+                TextColor="White"
+                RelativeLayout.XConstraint="148"
+                RelativeLayout.YConstraint="600"
+                RelativeLayout.WidthConstraint="120"
+                RelativeLayout.HeightConstraint="45"
+                BackgroundColor="#F84E29"/>
+        <Button 
+                Text="Profile"
+                TextColor="White"
+                RelativeLayout.XConstraint="270"
+                RelativeLayout.YConstraint="600"
+                RelativeLayout.WidthConstraint="120"
+                RelativeLayout.HeightConstraint="45"
+                BackgroundColor="#F84E29"/>
+
+        <SearchBar Placeholder="Cari lowongan"         
+                   RelativeLayout.XConstraint="30"
+                   RelativeLayout.YConstraint="20"
+                   TextColor="White"
+                   WidthRequest="350"
+                   BackgroundColor="#0A7493"/>
+
+
+    </RelativeLayout>
+</ContentPage>

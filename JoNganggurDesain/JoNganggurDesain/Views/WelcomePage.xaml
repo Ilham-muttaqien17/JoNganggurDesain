@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="JoNganggurDesain.Views.WelcomePage">
+    <RelativeLayout BackgroundColor="#169CC3">
+        <Image Source="WelcomeImage"             
+               HeightRequest="170"
+               WidthRequest="170"
+               RelativeLayout.XConstraint="125"
+               RelativeLayout.YConstraint="150"/>
+        <Image Source="TeksJonganggur"
+               HeightRequest="170"
+               WidthRequest="170"
+               RelativeLayout.XConstraint="125"
+               RelativeLayout.YConstraint="280"/>
+    </RelativeLayout>
+</ContentPage>

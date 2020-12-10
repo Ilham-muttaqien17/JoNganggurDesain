@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="JoNganggurDesain.Views.Profile">
+    <Grid>
+        <ScrollView>
+            <RelativeLayout BackgroundColor="#169CC3">
+
+
+                <Frame BackgroundColor="White"
+                           CornerRadius="20"
+                           WidthRequest="372"
+                           HeightRequest="700"
+                           RelativeLayout.XConstraint="0"
+                           RelativeLayout.YConstraint="250">
+
+                    <StackLayout>
+                        <Label Text="Informasi Akun"
+                                   TextColor="Black"
+                                   FontSize="Large"
+                                   FontAttributes="Bold"
+                                   RelativeLayout.XConstraint="30"
+                                   RelativeLayout.YConstraint="250"/>
+                        <Label Text="Nama Lengkap" TextColor="#0D9876"/>
+                        <Entry Placeholder="Nama lengkap" IsReadOnly="True"/>
+                        <Label Text="Username" TextColor="#0D9876"/>
+                        <Entry Placeholder="Username" IsReadOnly="True" />
+                        <Label Text="Password" TextColor="#0D9876"/>
+                        <Entry Placeholder="Password" IsPassword="True" IsReadOnly="True" />
+                        <Label Text="Tanggal lahir" TextColor="#0D9876"/>
+                        <DatePicker MinimumDate="01/01/1970" MaximumDate="01/01/2020" Date="01/01/2000"/>
+                        <Label Text="Email" TextColor="#0D9876"/>
+                        <Entry Placeholder="Email" IsReadOnly="True"/>
+                        <Label Text="Kontak" TextColor="#0D9876"/>
+                        <Entry Placeholder="621111111" Keyboard="Numeric" IsReadOnly="True" />
+                        <Label Text="Deskripsi anda" TextColor="#0D9876"  />
+                        <Editor Placeholder="Deskripsi anda" AutoSize="TextChanges" IsReadOnly="True"/>
+                    </StackLayout>
+
+                </Frame>
+
+
+            </RelativeLayout>
+        </ScrollView>
+
+        <Button Grid.Row="0" TextColor="White"
+                Text="Profile"
+                FontAttributes="Bold" 
+                BackgroundColor="#F84E29"  
+                HorizontalOptions="End" 
+                WidthRequest="120" 
+                HeightRequest="45" 
+                Margin="0,0,21,22" 
+                VerticalOptions="End"/>
+        <Button Grid.Row="0" TextColor="White"
+                Text="Riwayat"
+                FontAttributes="Bold" 
+                BackgroundColor="#F84E29"  
+                HorizontalOptions="End" 
+                WidthRequest="120" 
+                HeightRequest="45" 
+                Margin="0,0,143,22" 
+                VerticalOptions="End"/>
+        <Button Grid.Row="0" TextColor="White"
+                Text="Home"
+                FontAttributes="Bold" 
+                BackgroundColor="#F84E29"  
+                HorizontalOptions="End" 
+                WidthRequest="120" 
+                HeightRequest="45" 
+                Margin="0,0,266,22" 
+                VerticalOptions="End"/>
+
+    </Grid>
+</ContentPage>
