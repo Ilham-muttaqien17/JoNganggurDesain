@@ -24,7 +24,7 @@
                 RelativeLayout.XConstraint="40"
                 RelativeLayout.YConstraint="110">
                     <Frame.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="Riwayat"/>
+                        <TapGestureRecognizer Tapped="Test"/>
                     </Frame.GestureRecognizers>
 
                 </Frame>
