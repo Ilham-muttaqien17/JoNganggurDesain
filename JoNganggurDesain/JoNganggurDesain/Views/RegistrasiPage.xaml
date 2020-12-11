@@ -41,10 +41,8 @@
                    RelativeLayout.YConstraint="250">
 
                 <StackLayout>
-                    <Label Text="Nama depan" TextColor="#0D9876"/>
-                    <Entry Placeholder="Nama depan" />
-                    <Label Text="Nama belakang" TextColor="#0D9876"/>
-                    <Entry Placeholder="Nama belakang" />
+                    <Label Text="Nama Lengkap" TextColor="#0D9876"/>
+                    <Entry Placeholder="Nama lengkap" />
                     <Label Text="Username" TextColor="#0D9876"/>
                     <Entry Placeholder="Username"  />
                     <Label Text="Password" TextColor="#0D9876"/>
@@ -58,9 +56,10 @@
                     <Label Text="Kontak" TextColor="#0D9876"/>
                     <Entry Placeholder="Gunakan awalan 62" Keyboard="Numeric" />
                     <Label Text="Deskripsi anda" TextColor="#0D9876"  />
-                    <Editor Placeholder="Deskripsi anda" AutoSize="TextChanges"/>
+                    <Editor Placeholder="Deskripsi anda"  HeightRequest="120" MaxLength="100"/>
 
                     <Button Text="Daftar" Margin="0,20,0,0"
+                            VerticalOptions="EndAndExpand"
                             TextColor="White"
                             CornerRadius="25"
                             RelativeLayout.XConstraint="140"
