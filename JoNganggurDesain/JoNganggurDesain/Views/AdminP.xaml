@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="JoNganggurDesain.Views.AdminP">
+    <RelativeLayout BackgroundColor="#169CC3" >
+        <Frame  BackgroundColor="White"
+                        CornerRadius="20"
+                        Opacity="0.3"
+                        RelativeLayout.WidthConstraint="350"
+                        RelativeLayout.HeightConstraint="400"
+                        RelativeLayout.XConstraint="30"
+                        RelativeLayout.YConstraint="90">
+
+        </Frame>
+
+        <Label Text="Menu Admin Penyedia Kerja" Margin="20,20,0,0" TextColor="White" FontAttributes="Bold" FontSize="Large"/>
+
+        <Button 
+                ImageSource="plus"
+                ContentLayout="Top,5"
+                Text="Posting Pekerjaan"
+                TextColor="White"
+                CornerRadius="15"
+                RelativeLayout.XConstraint="70"
+                RelativeLayout.YConstraint="150"                    
+                RelativeLayout.WidthConstraint="120"
+                RelativeLayout.HeightConstraint="120"
+                BackgroundColor="#FD9500"/>
+        <Button 
+                ImageSource="list"
+                ContentLayout="Top,5"
+                Text="Lamaran Masuk"
+                TextColor="White"
+                CornerRadius="15"
+                RelativeLayout.XConstraint="70"
+                RelativeLayout.YConstraint="300"                    
+                RelativeLayout.WidthConstraint="120"
+                RelativeLayout.HeightConstraint="120"
+                BackgroundColor="#FD9500"/>
+        <Button 
+                ImageSource="profil"
+                ContentLayout="Top,5"
+                Text="Profil"
+                TextColor="White"
+                CornerRadius="15"
+                RelativeLayout.XConstraint="220"
+                RelativeLayout.YConstraint="150"                    
+                RelativeLayout.WidthConstraint="120"
+                RelativeLayout.HeightConstraint="120"
+                BackgroundColor="#FD9500"/>
+        <Button 
+                ImageSource="globe"
+                ContentLayout="Top,5"
+                Text="Pekerjaan sudah diposting"
+                TextColor="White"
+                CornerRadius="15"
+                RelativeLayout.XConstraint="220"
+                RelativeLayout.YConstraint="300"                    
+                RelativeLayout.WidthConstraint="120"
+                RelativeLayout.HeightConstraint="120"
+                BackgroundColor="#FD9500"/>
+    </RelativeLayout>
+</ContentPage>
