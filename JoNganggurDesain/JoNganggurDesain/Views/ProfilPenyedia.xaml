@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="JoNganggurDesain.Views.ProfilPenyedia">
+    <Grid>
+        <ScrollView>
+            <RelativeLayout BackgroundColor="#169CC3">
+                <StackLayout>
+                    <Image
+                        Source="imageperusahaan"
+                        Margin="100,50,100,50"
+                    />
+                    <Frame BackgroundColor="White"
+                           CornerRadius="20"
+                           WidthRequest="372"
+                           HeightRequest="700"
+                           RelativeLayout.XConstraint="0"
+                           RelativeLayout.YConstraint="250">
+
+                        <StackLayout>
+                            <Label Text="Profil Perusahaan"
+                                   TextColor="Black"
+                                   FontSize="Large"
+                                   FontAttributes="Bold"
+                                   RelativeLayout.XConstraint="30"
+                                   RelativeLayout.YConstraint="250"/>
+                            <Label Text="Nama Perusahaan" TextColor="#0D9876"/>
+                            <Entry Placeholder="Nama lengkap" IsReadOnly="True"/>
+                            <Label Text="Tentang Perusahaan" TextColor="#0D9876"/>
+                            <Editor Placeholder="Tentang Perusahaan" AutoSize="TextChanges" MaxLength="150" IsReadOnly="True" />
+                            <Label Text="Alamat" TextColor="#0D9876"/>
+                            <Editor Placeholder="Alamat" AutoSize="TextChanges" MaxLength="150" IsReadOnly="True" />
+                            <Label Text="Username" TextColor="#0D9876"/>
+                            <Entry Placeholder="Username" IsReadOnly="True" />
+                            <Label Text="Password" TextColor="#0D9876"/>
+                            <Entry Placeholder="Password" IsPassword="True" IsReadOnly="True" />
+
+                            <Button TextColor="White"
+                            Text="EDIT"
+                            CornerRadius="15"
+                            FontAttributes="Bold" 
+                            BackgroundColor="#F84E29"   
+                            WidthRequest="320" 
+                            HeightRequest="50"/>
+                            <Button TextColor="White"
+                            Text="LOGOUT"
+                            CornerRadius="15"
+                            FontAttributes="Bold" 
+                            BackgroundColor="#F84E29"   
+                            WidthRequest="320" 
+                            HeightRequest="50"/>
+                        </StackLayout>
+
+                    </Frame>
+
+                </StackLayout>
+            </RelativeLayout>
+        </ScrollView>
+
+    </Grid>
+</ContentPage>
