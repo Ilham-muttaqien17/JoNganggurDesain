@@ -2,15 +2,48 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="JoNganggurDesain.Views.DetailPage">
-    <RelativeLayout BackgroundColor="#169CC3">
-        <StackLayout>
-            <Image Source="kerja" 
-               Margin="50,50,50,20"/>
-            <Frame BackgroundColor="White"
+    
+    <ScrollView>
+        <RelativeLayout BackgroundColor="#169CC3">
+            <StackLayout>
+
+                <Label Text="Detail Lowongan"
+                       Margin="30,30,0,0"
+                       TextColor="White" 
+                       FontSize="Title"
+                       FontAttributes="Bold"/>
+
+                <Image Source="kerja" 
+                        Margin="50,20,50,20"/>
+                
+                <Frame BackgroundColor="White"
+                   CornerRadius="20"
                    Margin="50,0,50,0"
-                   HeightRequest="250"
-                   />
-        </StackLayout>
-        
-    </RelativeLayout>
+                   HeightRequest="500">
+                    <StackLayout>
+                        <Label Text="Nama Pekerjaan" TextColor="#0D9876" FontSize="Body"/>
+                        <Entry Placeholder="Asisten Rumah Tangga" IsReadOnly="True"/>
+                        <Label Text="Penyedia" TextColor="#0D9876" FontSize="Body"/>
+                        <Entry Placeholder="PT ABC" IsReadOnly="True"/>
+                        <Label Text="Lokasi" TextColor="#0D9876" FontSize="Body"/>
+                        <Entry Placeholder="Jl. ASD , Kabupate ZXC" IsReadOnly="True"/>
+                        <Label Text="Gaji" TextColor="#0D9876" FontSize="Body"/>
+                        <Entry Placeholder="15000000" IsReadOnly="True"/>
+                        <Label Text="Deskripsi Lowongan" TextColor="#0D9876" FontSize="Body"/>
+                        <Editor Placeholder="Syarat dan Ketentuan" IsReadOnly="True" MaxLength="100"/>
+                    </StackLayout>
+
+                </Frame>
+                
+                <Button Text="Lamar Sekarang"
+                    TextColor="White"
+                    Margin="50,10,50,20"
+                    BackgroundColor="#FD9500"
+                    CornerRadius="20"/>
+                
+            </StackLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+    
 </ContentPage>

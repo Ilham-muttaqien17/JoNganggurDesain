@@ -10,17 +10,15 @@ using Xamarin.Forms.Xaml;
 namespace JoNganggurDesain.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class LamaranMasuk : ContentPage
+    public partial class TerbaruPage : ContentPage
     {
-        public LamaranMasuk()
+        public TerbaruPage()
         {
             InitializeComponent();
         }
-
-        void Cek(object sender, EventArgs e)
+        void Test(object sender, EventArgs e)
         {
-            DisplayAlert("as", "asd", "asd");
+            DisplayAlert("Test", "Mantap", "Oke");
         }
-        
     }
 }

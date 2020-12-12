@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="JoNganggurDesain.Views.TerbaruPage">
+    <ScrollView>
+        <StackLayout BackgroundColor="#169CC3">
+            <Label Text="Lowongan Terbaru"
+                   Margin="30,30,0,0"
+                   TextColor="White"
+                   FontSize="Title"
+                   FontAttributes="Bold"
+                   />
+            <RelativeLayout>
+                <Frame BackgroundColor="#55DEBD"
+                       Margin="30,20,30,20"
+                       CornerRadius="20">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Test"/>
+                    </Frame.GestureRecognizers>
+                    <StackLayout>
+                        <Label Text="Asisten Rumah"/>
+                        <Label Text="Dibutuhkan segera"/>
+                        <Label Text="Jl. ASD as"/>
+                    </StackLayout>
+                </Frame>
+            </RelativeLayout>
+        </StackLayout>
+    </ScrollView>
+    
+</ContentPage>

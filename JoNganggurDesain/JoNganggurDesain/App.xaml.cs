@@ -11,7 +11,7 @@ namespace JoNganggurDesain
         {
             InitializeComponent();
 
-            MainPage = new LamaranMasuk();
+            MainPage = new TerbaruPage();
         }
 
         protected override void OnStart()

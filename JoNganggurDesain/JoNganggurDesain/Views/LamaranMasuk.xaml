@@ -19,7 +19,7 @@
                             RelativeLayout.XConstraint="40"
                             RelativeLayout.YConstraint="80">
                         <Frame.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="Klik"/>
+                            <TapGestureRecognizer Tapped="Cek"/>
                         </Frame.GestureRecognizers>
                         <RelativeLayout>
                             <Label Text="Taufiq" 
