@@ -8346,6 +8346,7 @@ namespace JoNganggurDesain.Droid
 			public const int ic_mtrl_chip_close_circle = 2131165286;
 			
 			// aapt resource value: 0x7F070068
+			public const int imageperusahaan = 2131165288;
 			public const int kerja = 2131165288;
 			
 			// aapt resource value: 0x7F070069
