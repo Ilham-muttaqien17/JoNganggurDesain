@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="JoNganggurDesain.Views.LamaranPage">
+    <ScrollView>
+        <StackLayout BackgroundColor="#169CC3">
+            <Label Text="Lamaran"
+                   Margin="30,20,30,0"
+                   TextColor="White" 
+                   FontSize="Large" 
+                   FontAttributes="Bold" />
+            <Frame BackgroundColor="White"
+                   CornerRadius="20"
+                   Margin="30,20,30,20"
+                   WidthRequest="100"
+                   HeightRequest="50">
+
+                <Grid>
+                    <StackLayout Orientation="Horizontal" Spacing="20">
+                        <StackLayout>
+                            <Label Grid.Column="0" Grid.Row="0" Text="PT. Angkasa" TextColor="Black" FontAttributes="Bold"/>
+                            <Label Grid.Column="0" Grid.Row="1" Text="Pekerjaan: Arsitek" TextColor="Black"/>
+                        </StackLayout>
+                        <Label VerticalOptions="Center" Text="Diterima" TextColor="Green" HorizontalOptions="EndAndExpand"/>
+                    </StackLayout>
+                </Grid>
+                
+            </Frame>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

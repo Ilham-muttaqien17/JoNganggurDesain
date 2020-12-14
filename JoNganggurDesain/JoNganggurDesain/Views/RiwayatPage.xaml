@@ -9,32 +9,40 @@
                 <!-- Box Riwayat -->
 
 
-                        <Label Text="Riwayat" 
+                    <Label Text="Riwayat" 
                                Margin="30,30,30,0" 
                                TextColor="White" 
                                FontAttributes="Bold"
                                FontSize="Large"/>
                     
-                        <Frame BackgroundColor="White"
+                    <Frame BackgroundColor="White"
                                Margin="30,20,30,20"
                                 CornerRadius="20"
                                 WidthRequest="330"
-                                HeightRequest="80">
-                            <Frame.GestureRecognizers>
+                                HeightRequest="50">
+                        <Frame.GestureRecognizers>
                                 <TapGestureRecognizer Tapped="Test"/>
-                            </Frame.GestureRecognizers>
-                            <StackLayout >
-                                <Label Text="PT Asd"
-                                       TextColor="Black"
-                                       FontAttributes="Bold" FontSize="Subtitle"/>
-                                <Label Text="Asisten Rumah Tangga"
-                                       TextColor="Black" FontSize="Small"/>
-                                <Label Text="Sedang bekerja"
-                                       TextColor="Green" FontSize="Subtitle"
-                                       FontAttributes="Bold"/>
-                            </StackLayout>
+                        </Frame.GestureRecognizers>
+
+                        <Grid>
+                            <StackLayout Orientation="Horizontal" Spacing="30">
+                                <StackLayout >
+                                    <Label Grid.Column="0" Grid.Row="0" Text="PT Asd"
+                                                   TextColor="Black"
+                                                   FontAttributes="Bold" FontSize="Subtitle"/>
+                                    <Label Grid.Column="0" Grid.Row="1" Text="Asisten Rumah Tangga"
+                                                   TextColor="Black" FontSize="Small"/>
+
+                                </StackLayout>
+
+                                <Label VerticalOptions="Center" Text="Sedang bekerja"
+                                           TextColor="Green" FontSize="Subtitle"
+                                           FontAttributes="Bold" HorizontalOptions="End"/>
+                        </StackLayout>
+                        </Grid>
+                            
                 
-                        </Frame>
+                    </Frame>
 
             </StackLayout>
             
