@@ -4,72 +4,65 @@
              x:Class="JoNganggurDesain.Views.RiwayatPage">
     <Grid>
         <ScrollView>
-            <StackLayout VerticalOptions="FillAndExpand">
+            <StackLayout  BackgroundColor="#169CC3"  VerticalOptions="FillAndExpand">
                 
                 <!-- Box Riwayat -->
 
-                <RelativeLayout BackgroundColor="#169CC3" >
 
-                        <Label Text="Riwayat" Margin="20,20,0,0" TextColor="White" FontAttributes="Bold" FontSize="Large"/>
+                        <Label Text="Riwayat" 
+                               Margin="30,30,30,0" 
+                               TextColor="White" 
+                               FontAttributes="Bold"
+                               FontSize="Large"/>
                     
                         <Frame BackgroundColor="White"
-                            CornerRadius="20"
-                            RelativeLayout.WidthConstraint="330"
-                            RelativeLayout.HeightConstraint="100"
-                            RelativeLayout.XConstraint="40"
-                            RelativeLayout.YConstraint="110">
+                               Margin="30,20,30,20"
+                                CornerRadius="20"
+                                WidthRequest="330"
+                                HeightRequest="80">
                             <Frame.GestureRecognizers>
                                 <TapGestureRecognizer Tapped="Test"/>
                             </Frame.GestureRecognizers>
-                            <RelativeLayout>
-                                <Label Text="PT Asd" Margin="1,2,0,0"
+                            <StackLayout >
+                                <Label Text="PT Asd"
                                        TextColor="Black"
                                        FontAttributes="Bold" FontSize="Subtitle"/>
-                                <Label Text="Asisten Rumah Tangga" Margin="1,2,0,0"
-                                       TextColor="Black" FontSize="Small"
-                                       RelativeLayout.YConstraint="40"/>
-                                <Label Text="Sedang bekerja" Margin="0,0,2,2" 
+                                <Label Text="Asisten Rumah Tangga"
+                                       TextColor="Black" FontSize="Small"/>
+                                <Label Text="Sedang bekerja"
                                        TextColor="Green" FontSize="Subtitle"
-                                       FontAttributes="Bold"
-                                       RelativeLayout.XConstraint="170" RelativeLayout.YConstraint="20"/>
-                            </RelativeLayout>
+                                       FontAttributes="Bold"/>
+                            </StackLayout>
                 
                         </Frame>
-                        
-                </RelativeLayout>
+
             </StackLayout>
             
         </ScrollView>
         
         <!-- Navigation -->
-
-        <Button Grid.Row="0" TextColor="White"
-                Text="Profile"
-                FontAttributes="Bold" 
-                BackgroundColor="#F84E29"  
-                HorizontalOptions="End" 
-                WidthRequest="120" 
-                HeightRequest="45" 
-                Margin="0,0,21,22" 
-                VerticalOptions="End"/>
-        <Button Grid.Row="0" TextColor="White"
-                Text="Riwayat"
-                FontAttributes="Bold" 
-                BackgroundColor="#F84E29"  
-                HorizontalOptions="End" 
-                WidthRequest="120" 
-                HeightRequest="45" 
-                Margin="0,0,143,22" 
-                VerticalOptions="End"/>
-        <Button Grid.Row="0" TextColor="White"
-                Text="Home"
-                FontAttributes="Bold" 
-                BackgroundColor="#F84E29"  
-                HorizontalOptions="End" 
-                WidthRequest="120" 
-                HeightRequest="45" 
-                Margin="0,0,266,22" 
-                VerticalOptions="End"/>
+        <StackLayout Orientation="Horizontal" Spacing="0" VerticalOptions="EndAndExpand" HorizontalOptions="Center" Margin="0,20,0,10">
+            <Button 
+                    Text="Home"
+                    TextColor="White"
+                    WidthRequest="100"
+                    HeightRequest="45"
+                    BackgroundColor="#F84E29"/>
+            <Button 
+                    Text="Riwayat"
+                    TextColor="White"
+                    WidthRequest="100"
+                    HeightRequest="45"
+                    BackgroundColor="#F84E29"/>
+            <Button 
+                    Text="Profile"
+                    TextColor="White"
+                    WidthRequest="100"
+                    HeightRequest="45"
+                    BackgroundColor="#F84E29"/>
+            
+        </StackLayout>
+        
 
     </Grid>
 </ContentPage>

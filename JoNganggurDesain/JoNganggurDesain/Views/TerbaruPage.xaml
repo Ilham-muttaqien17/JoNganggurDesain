@@ -10,7 +10,7 @@
                    FontSize="Title"
                    FontAttributes="Bold"
                    />
-            <RelativeLayout>
+            <StackLayout>
                 <Frame BackgroundColor="#55DEBD"
                        Margin="30,20,30,20"
                        CornerRadius="20">
@@ -18,12 +18,12 @@
                         <TapGestureRecognizer Tapped="Test"/>
                     </Frame.GestureRecognizers>
                     <StackLayout>
-                        <Label Text="Asisten Rumah"/>
+                        <Label Text="Asisten Rumah" FontAttributes="Bold" FontSize="Medium"/>
                         <Label Text="Dibutuhkan segera"/>
                         <Label Text="Jl. ASD as"/>
                     </StackLayout>
                 </Frame>
-            </RelativeLayout>
+            </StackLayout>
         </StackLayout>
     </ScrollView>
     
