@@ -2,134 +2,134 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="JoNganggurDesain.Views.Dashboard">
-    <RelativeLayout BackgroundColor="#169CC3">
-       
-            <Frame BackgroundColor="White"
-                    CornerRadius="20"
-                    WidthRequest="372"
-                    HeightRequest="400"
-                    RelativeLayout.XConstraint="0"
-                    RelativeLayout.YConstraint="270">
-
-                           
-            </Frame>
-
-        <!-- Rekomendasi -->
-
-        <Label Text="Rekomendasi Lowongan" 
-               TextColor="White"
-               FontSize="18"
-               RelativeLayout.XConstraint="30"
-               RelativeLayout.YConstraint="80"/>
-
-        <Frame BackgroundColor="#17CA9E"
-                CornerRadius="20"
-                RelativeLayout.WidthConstraint="160"
-                RelativeLayout.HeightConstraint="120"
-                RelativeLayout.XConstraint="30"
-                RelativeLayout.YConstraint="110">
-            <Frame.GestureRecognizers>
-                <TapGestureRecognizer Tapped="Rekomendasi"/>
-            </Frame.GestureRecognizers>
-            
-        </Frame>
-
-        <Frame BackgroundColor="#17CA9E"
-                CornerRadius="20"
-                RelativeLayout.WidthConstraint="160"
-                RelativeLayout.HeightConstraint="120"
-                RelativeLayout.XConstraint="220"
-                RelativeLayout.YConstraint="110">
-            <Frame.GestureRecognizers>
-                <TapGestureRecognizer Tapped="Rekomendasi"/>
-            </Frame.GestureRecognizers>
-        </Frame>
 
 
-        <!-- Menu-menu -->
+    <Grid>
+        <StackLayout BackgroundColor="#169CC3">
 
-        <Button 
-                ImageSource="map"
-                ContentLayout="Top,5"
-                Text="Lokasi"
-                TextColor="White"
-                CornerRadius="15"
-                RelativeLayout.XConstraint="60"
-                RelativeLayout.YConstraint="300"                    
-                RelativeLayout.WidthConstraint="120"
-                RelativeLayout.HeightConstraint="120"
-                BackgroundColor="#FD9500"/>
-        <Button 
-                ImageSource="list"
-                ContentLayout="Top,5"
-                Text="Lamaran"
-                TextColor="White"
-                CornerRadius="15"
-                RelativeLayout.XConstraint="60"
-                RelativeLayout.YConstraint="450"                    
-                RelativeLayout.WidthConstraint="120"
-                RelativeLayout.HeightConstraint="120"
-                BackgroundColor="#FD9500"/>
-        <Button 
-                ImageSource="bell"
-                ContentLayout="Top,5"
-                Text="Notifikasi"
-                TextColor="White"
-                CornerRadius="15"
-                RelativeLayout.XConstraint="230"
-                RelativeLayout.YConstraint="300"                    
-                RelativeLayout.WidthConstraint="120"
-                RelativeLayout.HeightConstraint="120"
-                BackgroundColor="#FD9500"/>
-        <Button 
-                ImageSource="globe"
-                ContentLayout="Top,5"
-                Text="Terbaru"
-                TextColor="White"
-                CornerRadius="15"
-                RelativeLayout.XConstraint="230"
-                RelativeLayout.YConstraint="450"                    
-                RelativeLayout.WidthConstraint="120"
-                RelativeLayout.HeightConstraint="120"
-                BackgroundColor="#FD9500"/>
-
-
-
-
-        <!-- Navigasi -->
-
-        <Button 
-                Text="Home"
-                TextColor="White"
-                RelativeLayout.XConstraint="25"
-                RelativeLayout.YConstraint="600"
-                RelativeLayout.WidthConstraint="120"
-                RelativeLayout.HeightConstraint="45"
-                BackgroundColor="#F84E29"/>
-        <Button 
-                Text="Riwayat"
-                TextColor="White"
-                RelativeLayout.XConstraint="148"
-                RelativeLayout.YConstraint="600"
-                RelativeLayout.WidthConstraint="120"
-                RelativeLayout.HeightConstraint="45"
-                BackgroundColor="#F84E29"/>
-        <Button 
-                Text="Profile"
-                TextColor="White"
-                RelativeLayout.XConstraint="270"
-                RelativeLayout.YConstraint="600"
-                RelativeLayout.WidthConstraint="120"
-                RelativeLayout.HeightConstraint="45"
-                BackgroundColor="#F84E29"/>
-
-        <SearchBar Placeholder="Cari lowongan"         
-                   RelativeLayout.XConstraint="30"
-                   RelativeLayout.YConstraint="20"
+            <SearchBar Placeholder="Cari lowongan"
+                   Margin="30,30,30,10"
                    TextColor="White"
                    WidthRequest="350"
                    BackgroundColor="#0A7493"/>
 
+            <!-- Rekomendasi -->
 
-    </RelativeLayout>
+            <Label Text="Rekomendasi Lowongan"
+               Margin="30,0,30,0"
+               TextColor="White"
+               FontSize="18"/>
+
+            <StackLayout Orientation="Horizontal" Margin="30,10,30,0" Spacing="20" HorizontalOptions="Center">
+                <Frame BackgroundColor="#17CA9E"
+                CornerRadius="20"
+                WidthRequest="120"
+                HeightRequest="120">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Rekomendasi"/>
+                    </Frame.GestureRecognizers>
+
+                </Frame>
+
+                <Frame BackgroundColor="#17CA9E"
+                CornerRadius="20"
+                WidthRequest="120"
+                HeightRequest="120">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Rekomendasi"/>
+                    </Frame.GestureRecognizers>
+                </Frame>
+            </StackLayout>
+
+            <Frame BackgroundColor="White"
+                    Margin="0,20,0,0"
+                        CornerRadius="20"
+                        WidthRequest="372"
+                        HeightRequest="600">
+
+                <!-- Menu-menu -->
+
+                <StackLayout >
+                    <StackLayout Orientation="Horizontal" Spacing="50" HorizontalOptions="Center" Margin="0,0,0,20">
+                        <Button 
+                            ImageSource="map"
+                            ContentLayout="Top,5"
+                            Text="Lokasi"
+                            TextColor="White"
+                            CornerRadius="15"                   
+                            WidthRequest="110"
+                            HeightRequest="110"
+                            BackgroundColor="#FD9500"/>
+                        <Button 
+                            ImageSource="list"
+                            ContentLayout="Top,5"
+                            Text="Lamaran"
+                            TextColor="White"
+                            CornerRadius="15"                  
+                            WidthRequest="110"
+                            HeightRequest="110"
+                            BackgroundColor="#FD9500"/>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal" Spacing="50" HorizontalOptions="Center">
+                        <Button 
+                            ImageSource="bell"
+                            ContentLayout="Top,5"
+                            Text="Notifikasi"
+                            TextColor="White"
+                            CornerRadius="15"                  
+                            WidthRequest="110"
+                            HeightRequest="110"
+                            BackgroundColor="#FD9500"/>
+                        <Button 
+                            ImageSource="globe"
+                            ContentLayout="Top,5"
+                            Text="Terbaru"
+                            TextColor="White"
+                            CornerRadius="15"                  
+                            WidthRequest="110"
+                            HeightRequest="110"
+                            BackgroundColor="#FD9500"/>
+                    </StackLayout>
+
+
+
+                </StackLayout>
+
+
+            </Frame>
+
+
+
+
+            <!-- Navigasi -->
+
+
+
+
+        </StackLayout>
+        <StackLayout Orientation="Horizontal" Spacing="0" VerticalOptions="EndAndExpand" HorizontalOptions="Center" Margin="0,20,0,10">
+            <Button 
+                                Text="Home"
+                                TextColor="White"
+                                WidthRequest="100"
+                                HeightRequest="45"
+                                BackgroundColor="#F84E29"/>
+            <Button 
+                                Text="Riwayat"
+                                TextColor="White"
+                                WidthRequest="100"
+                                HeightRequest="45"
+                                BackgroundColor="#F84E29"/>
+            <Button 
+                                Text="Profile"
+                                TextColor="White"
+                                WidthRequest="100"
+                                HeightRequest="45"
+                                BackgroundColor="#F84E29"/>
+        </StackLayout>
+    </Grid>
+   
+    
+    
 </ContentPage>

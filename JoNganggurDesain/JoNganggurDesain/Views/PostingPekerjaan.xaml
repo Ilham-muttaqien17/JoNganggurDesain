@@ -3,45 +3,45 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="JoNganggurDesain.Views.PostingPekerjaan">
     <Grid>
-        <RelativeLayout BackgroundColor="#169CC3">
+        <StackLayout BackgroundColor="#169CC3">
 
-            <StackLayout 
-                Margin="10,10,10,10">
+            <StackLayout Margin="30,20,30,20">
                    
                 <Frame BackgroundColor="White"
+                       Margin="10,10,10,20"
                            CornerRadius="20"
                            WidthRequest="350"
-                           HeightRequest="530"
-                           RelativeLayout.XConstraint="10"
-                           RelativeLayout.YConstraint="10">
+                           HeightRequest="530">
 
-                <StackLayout>
-                    <Label Text="Tambah Pekerjaan"
-                                   TextColor="Black"
-                                   FontSize="Large"
-                                   FontAttributes="Bold"
-                                   RelativeLayout.XConstraint="30"
-                                   RelativeLayout.YConstraint="250"/>
-                    <Label Text="Nama Pekerjaan" TextColor="#0D9876"/>
-                    <Entry Placeholder="Nama Pekerjaan" />
-                    <Label Text="Gaji" TextColor="#0D9876"/>
-                    <Entry Placeholder="2.000.000" Keyboard="Numeric"  />
-                    <Label Text="Deskripsi" TextColor="#0D9876"  />
-                    <Editor Placeholder="Deskripsi" AutoSize="TextChanges" MaxLength="150" />
-                    <Label Text="Persyaratan" TextColor="#0D9876"  />
-                    <Editor Placeholder="Persyaratan" AutoSize="TextChanges" MaxLength="150" />
+                    <StackLayout>
+                        <Label Text="Tambah Pekerjaan"
+                                       TextColor="Black"
+                                       FontSize="Large"
+                                       FontAttributes="Bold"
+                                       RelativeLayout.XConstraint="30"
+                                       RelativeLayout.YConstraint="250"/>
+                        <Label Text="Nama Pekerjaan" TextColor="#0D9876"/>
+                        <Entry Placeholder="Nama Pekerjaan" />
+                        <Label Text="Gaji" TextColor="#0D9876"/>
+                        <Entry Placeholder="2.000.000" Keyboard="Numeric"  />
+                        <Label Text="Deskripsi" TextColor="#0D9876"  />
+                        <Editor Placeholder="Deskripsi" AutoSize="TextChanges" MaxLength="150" />
+                        <Label Text="Persyaratan" TextColor="#0D9876"  />
+                        <Editor Placeholder="Persyaratan" AutoSize="TextChanges" MaxLength="150" />
                 </StackLayout>
 
                 </Frame>
                 <Button TextColor="White"
-                    Text="UPLOAD PEKERJAAN"
-                    FontAttributes="Bold" 
-                    BackgroundColor="#F84E29"   
-                    WidthRequest="320" 
-                    HeightRequest="50" 
+                        CornerRadius="20"
+                        Text="UPLOAD PEKERJAAN"
+                        FontAttributes="Bold" 
+                        BackgroundColor="#F84E29"   
+                        WidthRequest="350" 
+                        HeightRequest="50"
+                        Margin="20,0,20,0"
                  />
              </StackLayout>
-        </RelativeLayout>
+        </StackLayout>
         
     </Grid>
 </ContentPage>

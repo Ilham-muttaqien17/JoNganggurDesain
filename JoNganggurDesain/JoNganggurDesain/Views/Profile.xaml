@@ -3,73 +3,92 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="JoNganggurDesain.Views.Profile">
     <Grid>
-        <ScrollView>
-            <RelativeLayout BackgroundColor="#169CC3">
+        <StackLayout BackgroundColor="#169CC3">
+            <Image Source="kerja" Margin="50,20,50,10"/>
+            <Label Text="User" TextColor="White" 
+                   FontSize="Large" FontAttributes="Bold" 
+                   HorizontalTextAlignment="Center" Margin="0,0,0,10"/>
+
+            <ScrollView>
+                <StackLayout BackgroundColor="#169CC3">
 
 
-                <Frame BackgroundColor="White"
+                    <Frame BackgroundColor="White"
+                       Margin="0,0,0,0"
                            CornerRadius="20"
-                           WidthRequest="372"
-                           HeightRequest="700"
-                           RelativeLayout.XConstraint="0"
-                           RelativeLayout.YConstraint="250">
+                           WidthRequest="343"
+                           HeightRequest="700">
 
-                    <StackLayout>
-                        <Label Text="Informasi Akun"
+                        <StackLayout>
+                            <Label Text="Informasi Akun"
                                    TextColor="Black"
                                    FontSize="Large"
                                    FontAttributes="Bold"
                                    RelativeLayout.XConstraint="30"
                                    RelativeLayout.YConstraint="250"/>
-                        <Label Text="Nama Lengkap" TextColor="#0D9876"/>
-                        <Entry Placeholder="Nama lengkap" IsReadOnly="True"/>
-                        <Label Text="Username" TextColor="#0D9876"/>
-                        <Entry Placeholder="Username" IsReadOnly="True" />
-                        <Label Text="Password" TextColor="#0D9876"/>
-                        <Entry Placeholder="Password" IsPassword="True" IsReadOnly="True" />
-                        <Label Text="Tanggal lahir" TextColor="#0D9876"/>
-                        <DatePicker MinimumDate="01/01/1970" MaximumDate="01/01/2020" Date="01/01/2000"/>
-                        <Label Text="Email" TextColor="#0D9876"/>
-                        <Entry Placeholder="Email" IsReadOnly="True"/>
-                        <Label Text="Kontak" TextColor="#0D9876"/>
-                        <Entry Placeholder="621111111" Keyboard="Numeric" IsReadOnly="True" />
-                        <Label Text="Deskripsi anda" TextColor="#0D9876"  />
-                        <Editor Placeholder="Deskripsi anda" AutoSize="TextChanges" IsReadOnly="True"/>
-                    </StackLayout>
+                            <Label Text="Nama Lengkap" TextColor="#0D9876"/>
+                            <Entry Placeholder="Nama lengkap" IsReadOnly="True"/>
+                            <Label Text="Username" TextColor="#0D9876"/>
+                            <Entry Placeholder="Username" IsReadOnly="True" />
+                            <Label Text="Password" TextColor="#0D9876"/>
+                            <Entry Placeholder="Password" IsPassword="True" IsReadOnly="True" />
+                            <Label Text="Tanggal lahir" TextColor="#0D9876"/>
+                            <DatePicker MinimumDate="01/01/1970" MaximumDate="01/01/2020" Date="01/01/2000"/>
+                            <Label Text="Email" TextColor="#0D9876"/>
+                            <Entry Placeholder="Email" IsReadOnly="True"/>
+                            <Label Text="Kontak" TextColor="#0D9876"/>
+                            <Entry Placeholder="621111111" Keyboard="Numeric" IsReadOnly="True" />
+                            <Label Text="Deskripsi anda" TextColor="#0D9876"  />
+                            <Editor Placeholder="Deskripsi anda" AutoSize="TextChanges" IsReadOnly="True" HeightRequest="120"/>
 
-                </Frame>
+                            <StackLayout Orientation="Horizontal" Spacing="20" HorizontalOptions="Center">
+                                <Button Text="EDIT"
+                                        CornerRadius="20"
+                                        BackgroundColor="#FD9500"
+                                        WidthRequest="100"
+                                        HeightRequest="40"/>
+                                <Button Text="LOGOUT"
+                                        BackgroundColor="#FD9500"
+                                        CornerRadius="20"
+                                        WidthRequest="100"
+                                        HeightRequest="40"/>
+                            </StackLayout>
+                            
+                            
+                        </StackLayout>
 
+                            
+                        
 
-            </RelativeLayout>
-        </ScrollView>
+                    </Frame>
+                    
 
-        <Button Grid.Row="0" TextColor="White"
-                Text="Profile"
-                FontAttributes="Bold" 
-                BackgroundColor="#F84E29"  
-                HorizontalOptions="End" 
-                WidthRequest="120" 
-                HeightRequest="45" 
-                Margin="0,0,21,22" 
-                VerticalOptions="End"/>
-        <Button Grid.Row="0" TextColor="White"
-                Text="Riwayat"
-                FontAttributes="Bold" 
-                BackgroundColor="#F84E29"  
-                HorizontalOptions="End" 
-                WidthRequest="120" 
-                HeightRequest="45" 
-                Margin="0,0,143,22" 
-                VerticalOptions="End"/>
-        <Button Grid.Row="0" TextColor="White"
-                Text="Home"
-                FontAttributes="Bold" 
-                BackgroundColor="#F84E29"  
-                HorizontalOptions="End" 
-                WidthRequest="120" 
-                HeightRequest="45" 
-                Margin="0,0,266,22" 
-                VerticalOptions="End"/>
+                </StackLayout>
+            </ScrollView>
+
+            
+
+        </StackLayout>
+        <StackLayout Orientation="Horizontal" Spacing="0" VerticalOptions="EndAndExpand" HorizontalOptions="Center" Margin="0,20,0,10">
+            <Button 
+                                Text="Home"
+                                TextColor="White"
+                                WidthRequest="100"
+                                HeightRequest="45"
+                                BackgroundColor="#F84E29"/>
+            <Button 
+                                Text="Riwayat"
+                                TextColor="White"
+                                WidthRequest="100"
+                                HeightRequest="45"
+                                BackgroundColor="#F84E29"/>
+            <Button 
+                                Text="Profile"
+                                TextColor="White"
+                                WidthRequest="100"
+                                HeightRequest="45"
+                                BackgroundColor="#F84E29"/>
+        </StackLayout>
 
     </Grid>
 </ContentPage>

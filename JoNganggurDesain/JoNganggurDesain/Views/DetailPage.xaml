@@ -4,7 +4,7 @@
              x:Class="JoNganggurDesain.Views.DetailPage">
     
     <ScrollView>
-        <RelativeLayout BackgroundColor="#169CC3">
+        <StackLayout BackgroundColor="#169CC3">
             <StackLayout>
 
                 <Label Text="Detail Lowongan"
@@ -18,7 +18,7 @@
                 
                 <Frame BackgroundColor="White"
                    CornerRadius="20"
-                   Margin="50,0,50,0"
+                   Margin="30,0,30,0"
                    HeightRequest="500">
                     <StackLayout>
                         <Label Text="Nama Pekerjaan" TextColor="#0D9876" FontSize="Body"/>
@@ -30,20 +30,20 @@
                         <Label Text="Gaji" TextColor="#0D9876" FontSize="Body"/>
                         <Entry Placeholder="15000000" IsReadOnly="True"/>
                         <Label Text="Deskripsi Lowongan" TextColor="#0D9876" FontSize="Body"/>
-                        <Editor Placeholder="Syarat dan Ketentuan" IsReadOnly="True" MaxLength="100"/>
+                        <Editor Placeholder="Syarat dan Ketentuan" IsReadOnly="True" MaxLength="100" HeightRequest="120"/>
                     </StackLayout>
 
                 </Frame>
                 
                 <Button Text="Lamar Sekarang"
                     TextColor="White"
-                    Margin="50,10,50,20"
+                    Margin="30,10,30,20"
                     BackgroundColor="#FD9500"
                     CornerRadius="20"/>
                 
             </StackLayout>
 
-        </RelativeLayout>
+        </StackLayout>
     </ScrollView>
     
 </ContentPage>

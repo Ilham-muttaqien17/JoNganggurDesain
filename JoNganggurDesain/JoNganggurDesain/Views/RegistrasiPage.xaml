@@ -2,63 +2,63 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="JoNganggurDesain.Views.RegistrasiPage">
-    <ScrollView>
-        <RelativeLayout BackgroundColor="#169CC3">
-
-            <Image Source="Logo"             
-               HeightRequest="90"
-               WidthRequest="90"
-               RelativeLayout.XConstraint="155"
-               RelativeLayout.YConstraint="60"/>
-
-            <Button Text="Masuk"
-                TextColor="White"
-                    CornerRadius="25"
-                    RelativeLayout.XConstraint="60"
-                    RelativeLayout.YConstraint="175"                    
-                    RelativeLayout.WidthConstraint="125"
-                    RelativeLayout.HeightConstraint="50"
-                    BackgroundColor="#C4C4C4"/>
-
-            <Button Text="Daftar" 
-                TextColor="White"
-                CornerRadius="25"
-                RelativeLayout.XConstraint="220"
-                RelativeLayout.YConstraint="175"
-                RelativeLayout.WidthConstraint="125"
-                RelativeLayout.HeightConstraint="50"                
-                BackgroundColor="#55DEBD"/>
 
 
-            <!-- Frame register-->
+        <ScrollView>
+            <StackLayout BackgroundColor="#169CC3">
+                <StackLayout.Margin>
+                    <OnIdiom x:TypeArguments="Thickness" Tablet="140,150,140,0" Phone="0,0,0,0"/>
+                </StackLayout.Margin>
 
-            <Frame BackgroundColor="White"
-                   Margin="0,0,0,30"
+                <Image Source="Logo"
+                       Margin="0,30,0,20"
+                       HeightRequest="90"
+                       WidthRequest="90"/>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="20">
+                    <Button Text="Masuk"
+                            TextColor="White"
+                            CornerRadius="25"                
+                            WidthRequest="130"
+                            HeightRequest="50"
+                            BackgroundColor="#C4C4C4"/>
+
+                    <Button Text="Daftar" 
+                            TextColor="White"
+                            CornerRadius="25"
+                            WidthRequest="130"
+                            HeightRequest="50"                
+                            BackgroundColor="#55DEBD"/>
+                </StackLayout>
+                
+
+
+                <!-- Frame register-->
+
+                <Frame BackgroundColor="White"
+                   Margin="30,20,30,30"
                    CornerRadius="15"
                    WidthRequest="300"
-                   HeightRequest="750"
-                   RelativeLayout.XConstraint="35"
-                   RelativeLayout.YConstraint="250">
+                   HeightRequest="750">
 
-                <StackLayout>
-                    <Label Text="Nama Lengkap" TextColor="#0D9876"/>
-                    <Entry Placeholder="Nama lengkap" />
-                    <Label Text="Username" TextColor="#0D9876"/>
-                    <Entry Placeholder="Username"  />
-                    <Label Text="Password" TextColor="#0D9876"/>
-                    <Entry Placeholder="Password" IsPassword="True" />
-                    <Label Text="Konfirmasi password" TextColor="#0D9876"/>
-                    <Entry Placeholder="Ketik ulang password" IsPassword="True"/>
-                    <Label Text="Tanggal lahir" TextColor="#0D9876"/>
-                    <DatePicker MinimumDate="01/01/1970" MaximumDate="01/01/2020" Date="01/01/2000"/>
-                    <Label Text="Email" TextColor="#0D9876"/>
-                    <Entry Placeholder="Email"/>
-                    <Label Text="Kontak" TextColor="#0D9876"/>
-                    <Entry Placeholder="Gunakan awalan 62" Keyboard="Numeric" />
-                    <Label Text="Deskripsi anda" TextColor="#0D9876"  />
-                    <Editor Placeholder="Deskripsi anda"  HeightRequest="120" MaxLength="100"/>
+                    <StackLayout>
+                        <Label Text="Nama Lengkap" TextColor="#0D9876"/>
+                        <Entry Placeholder="Nama lengkap" />
+                        <Label Text="Username" TextColor="#0D9876"/>
+                        <Entry Placeholder="Username"  />
+                        <Label Text="Password" TextColor="#0D9876"/>
+                        <Entry Placeholder="Password" IsPassword="True" />
+                        <Label Text="Konfirmasi password" TextColor="#0D9876"/>
+                        <Entry Placeholder="Ketik ulang password" IsPassword="True"/>
+                        <Label Text="Tanggal lahir" TextColor="#0D9876"/>
+                        <DatePicker MinimumDate="01/01/1970" MaximumDate="01/01/2020" Date="01/01/2000"/>
+                        <Label Text="Email" TextColor="#0D9876"/>
+                        <Entry Placeholder="Email"/>
+                        <Label Text="Kontak" TextColor="#0D9876"/>
+                        <Entry Placeholder="Gunakan awalan 62" Keyboard="Numeric" />
+                        <Label Text="Deskripsi anda" TextColor="#0D9876"  />
+                        <Editor Placeholder="Deskripsi anda"  HeightRequest="120" MaxLength="100"/>
 
-                    <Button Text="Daftar" Margin="0,20,0,0"
+                        <Button Text="Daftar" Margin="0,20,0,0"
                             VerticalOptions="EndAndExpand"
                             TextColor="White"
                             CornerRadius="25"
@@ -67,13 +67,15 @@
                             RelativeLayout.WidthConstraint="125"
                             RelativeLayout.HeightConstraint="50"
                             BackgroundColor="#FD9500"/>
-                </StackLayout>
+                    </StackLayout>
 
 
-            </Frame>
+                </Frame>
 
 
 
-        </RelativeLayout>
-    </ScrollView>
+            </StackLayout>
+        </ScrollView>
+
+    
 </ContentPage>

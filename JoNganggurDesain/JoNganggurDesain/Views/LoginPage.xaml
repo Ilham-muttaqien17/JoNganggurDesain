@@ -3,39 +3,39 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="JoNganggurDesain.Views.LoginPage">
     
-    <RelativeLayout x:Name="MasterLayout" BackgroundColor="#169CC3" >
+    <StackLayout x:Name="MasterLayout" BackgroundColor="#169CC3" >
+
+        <StackLayout.Margin>
+            <OnIdiom x:TypeArguments="Thickness" Tablet="140,150,140,0" Phone="0,0,0,0"/>
+        </StackLayout.Margin>
+
+        <Image Source="Logo"
+                       Margin="0,30,0,20"
+                       HeightRequest="90"
+                       WidthRequest="90"/>
         
-        <Image Source="Logo"             
-               HeightRequest="90"
-               WidthRequest="90"
-               RelativeLayout.XConstraint="155"
-               RelativeLayout.YConstraint="60"/>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="20">
+            <Button Text="Masuk"
+                            TextColor="White"
+                            CornerRadius="25"                
+                            WidthRequest="130"
+                            HeightRequest="50"
+                            BackgroundColor="#C4C4C4"/>
 
-        <Button Text="Masuk"
-                TextColor="White"
-                    CornerRadius="25"
-                    RelativeLayout.XConstraint="60"
-                    RelativeLayout.YConstraint="175"                    
-                    RelativeLayout.WidthConstraint="125"
-                    RelativeLayout.HeightConstraint="50"
-                    BackgroundColor="#55DEBD"/>
-
-        <Button Text="Daftar" 
-                TextColor="White"
-                CornerRadius="25"
-                RelativeLayout.XConstraint="220"
-                RelativeLayout.YConstraint="175"
-                RelativeLayout.WidthConstraint="125"
-                RelativeLayout.HeightConstraint="50"
-                BackgroundColor="#C4C4C4"/>
+            <Button Text="Daftar" 
+                            TextColor="White"
+                            CornerRadius="25"
+                            WidthRequest="130"
+                            HeightRequest="50"                
+                            BackgroundColor="#55DEBD"/>
+        </StackLayout>
 
 
         <Frame BackgroundColor="White"
-                 CornerRadius="20"
-                     WidthRequest="260"
-                     HeightRequest="220"
-                     RelativeLayout.XConstraint="55"
-                     RelativeLayout.YConstraint="250">
+               Margin="30,20,30,30"
+               CornerRadius="20"
+               WidthRequest="260"
+               HeightRequest="220">
 
             <StackLayout x:Name="LoginEntry" Margin="10">
                 <ActivityIndicator x:Name="ActivitySpinner" Color="Red" IsRunning="True"/>
@@ -49,16 +49,15 @@
 
         </Frame>
 
-        <Button x:Name="Btn_Signin" Text="Masuk" 
+        <Button x:Name="Btn_Signin" Text="Masuk"
+                Margin="30,20,30,20"
                 TextColor="White"
                 CornerRadius="25"
-                RelativeLayout.XConstraint="140"
-                RelativeLayout.YConstraint="480"
-                RelativeLayout.WidthConstraint="125"
-                RelativeLayout.HeightConstraint="50"
+                WidthRequest="125"
+                HeightRequest="50"
                 BackgroundColor="#FD9500"
                 Clicked="SignInProcedure"/>
 
 
-    </RelativeLayout>
+    </StackLayout>
 </ContentPage>

@@ -4,18 +4,16 @@
              x:Class="JoNganggurDesain.Views.ProfilPenyedia">
     <Grid>
         <ScrollView>
-            <RelativeLayout BackgroundColor="#169CC3">
-                <StackLayout>
+            <StackLayout BackgroundColor="#169CC3">
+
                     <Image
                         Source="imageperusahaan"
-                        Margin="100,50,100,50"
+                        Margin="80,50,80,50"
                     />
                     <Frame BackgroundColor="White"
                            CornerRadius="20"
                            WidthRequest="372"
-                           HeightRequest="700"
-                           RelativeLayout.XConstraint="0"
-                           RelativeLayout.YConstraint="250">
+                           HeightRequest="450">
 
                         <StackLayout>
                             <Label Text="Profil Perusahaan"
@@ -35,26 +33,31 @@
                             <Label Text="Password" TextColor="#0D9876"/>
                             <Entry Placeholder="Password" IsPassword="True" IsReadOnly="True" />
 
-                            <Button TextColor="White"
-                            Text="EDIT"
-                            CornerRadius="15"
-                            FontAttributes="Bold" 
-                            BackgroundColor="#F84E29"   
-                            WidthRequest="320" 
-                            HeightRequest="50"/>
-                            <Button TextColor="White"
-                            Text="LOGOUT"
-                            CornerRadius="15"
-                            FontAttributes="Bold" 
-                            BackgroundColor="#F84E29"   
-                            WidthRequest="320" 
-                            HeightRequest="50"/>
+                            <StackLayout Orientation="Horizontal" Spacing="20" HorizontalOptions="Center" Margin="0,20,0,20">
+                                <Button TextColor="White"
+                                    Text="EDIT"
+                                    CornerRadius="15"
+                                    FontAttributes="Bold" 
+                                    BackgroundColor="#F84E29"   
+                                    WidthRequest="120" 
+                                    HeightRequest="50"/>
+                                <Button TextColor="White"
+                                    Text="LOGOUT"
+                                    CornerRadius="15"
+                                    FontAttributes="Bold" 
+                                    BackgroundColor="#F84E29"   
+                                    WidthRequest="120" 
+                                    HeightRequest="50"/>
                         </StackLayout>
+
+                    </StackLayout>
+                        
 
                     </Frame>
 
-                </StackLayout>
-            </RelativeLayout>
+                    
+
+            </StackLayout>
         </ScrollView>
 
     </Grid>
