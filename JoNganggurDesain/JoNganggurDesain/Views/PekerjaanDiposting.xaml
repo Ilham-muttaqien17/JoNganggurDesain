@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="JoNganggurDesain.Views.PekerjaanDiposting">
-    <Grid>
+
         <ScrollView>
             <StackLayout  BackgroundColor="#169CC3"  VerticalOptions="FillAndExpand">
 
@@ -13,7 +13,7 @@
                                Margin="30,30,30,0" 
                                TextColor="White" 
                                FontAttributes="Bold"
-                               FontSize="Large"/>
+                               FontSize="Title"/>
                 <StackLayout>
                     <Frame BackgroundColor="White"
                                Margin="30,20,30,20"
@@ -22,14 +22,28 @@
                     <Frame.GestureRecognizers>
                         <TapGestureRecognizer Tapped="Test"/>
                     </Frame.GestureRecognizers>
-                    <StackLayout >
-                        <Label Text="Arsitek"
-                                       TextColor="Black"
-                                       FontAttributes="Bold" FontSize="Subtitle"/>
-                        <Label Text="Aktif"
-                                       TextColor="Green" FontSize="Subtitle"
-                                       FontAttributes="Bold"/>
-                    </StackLayout>
+                        <Grid>
+                            <StackLayout Orientation="Horizontal" Spacing="30">
+                                <StackLayout>
+                                    <Label Grid.Column="0"
+                                           Grid.Row="0"
+                                           Text="Arsitek"
+                                           TextColor="Black"
+                                           FontAttributes="Bold" FontSize="Subtitle"/>
+                                    <Label Grid.Column="0"
+                                           Grid.Row="1"
+                                           Text="Aktif"
+                                           TextColor="Green" FontSize="Subtitle"
+                                           FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Image HorizontalOptions="EndAndExpand" 
+                                       Grid.Column="1"
+                                       Grid.Row="1"
+                                       Source="delete"/>
+                            </StackLayout>
+                            
+                        </Grid>
+                    
 
                     </Frame>
                 </StackLayout>
@@ -38,6 +52,4 @@
 
         </ScrollView>
 
-
-    </Grid>
 </ContentPage>

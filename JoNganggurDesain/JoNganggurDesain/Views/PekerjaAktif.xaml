@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="JoNganggurDesain.Views.PekerjaAktif">
-    <Grid>
+
         <ScrollView>
             <StackLayout  BackgroundColor="#169CC3"  VerticalOptions="FillAndExpand">
 
@@ -22,17 +22,37 @@
                     <Frame.GestureRecognizers>
                         <TapGestureRecognizer Tapped="Test"/>
                     </Frame.GestureRecognizers>
-                    <StackLayout >
-                        <Label Text="Taufiq"
+                    <Grid>
+                        <StackLayout  Orientation="Horizontal" Spacing="30">
+                            <StackLayout >
+                                <Label Grid.Column="0"
+                                       Grid.Row="0" 
+                                       Text="Taufiq"
                                        TextColor="Black"
                                        FontAttributes="Bold" FontSize="Subtitle"/>
-                        <Label Text="Jl. Mawar No. 10"
+                                <Label Grid.Column="0"
+                                       Grid.Row="1"
+                                       Text="Jl. Mawar No. 10"
                                        TextColor="Black"
                                        FontAttributes="Bold" FontSize="Subtitle"/>
-                        <Label Text="Aktif"
+                                <Label Grid.Column="0"
+                                       Grid.Row="2"
+                                       Text="Aktif"
                                        TextColor="Green" FontSize="Subtitle"
                                        FontAttributes="Bold"/>
-                    </StackLayout>
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal" Spacing="10" HorizontalOptions="EndAndExpand">
+                                <Image Source="done"
+                                       Grid.Column="1"
+                                       Grid.Row="1"/>
+                                <Image Source="delete"
+                                       Grid.Column="1"
+                                       Grid.Row="0"/>
+                                
+                            </StackLayout>
+                        </StackLayout>
+                    </Grid>
+                    
 
                 </Frame>
 
@@ -40,6 +60,4 @@
 
         </ScrollView>
 
-
-    </Grid>
 </ContentPage>
