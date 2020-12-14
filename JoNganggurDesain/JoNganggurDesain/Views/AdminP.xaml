@@ -10,7 +10,7 @@
                FontSize="Title"/>
         
         <Frame  BackgroundColor="White"
-                Margin="30,20,20,0"
+                Margin="30,20,30,0"
                 CornerRadius="20"
                 WidthRequest="350"
                 HeightRequest="450">
@@ -62,7 +62,7 @@
                 <Button 
                     Margin="0,20,0,20"
                     HorizontalOptions="Center"
-                            ImageSource="profile"
+                            ImageSource="profil"
                             ContentLayout="Top,5"
                             Text="PEKERJA AKTIF"
                             TextColor="White"
