@@ -143,10 +143,10 @@
     <AndroidResource Include="Resources\drawable\kerja.jpeg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\gedung.png" />
+    <AndroidResource Include="Resources\drawable\dot.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\dot.png" />
+    <AndroidResource Include="Resources\drawable\gedung.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <ProjectExtensions>
