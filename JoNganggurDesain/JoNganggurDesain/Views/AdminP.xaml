@@ -4,7 +4,7 @@
              x:Class="JoNganggurDesain.Views.AdminP">
     <StackLayout BackgroundColor="#169CC3" >
         <Label Text="Menu Admin Penyedia Kerja" 
-               Margin="20,20,0,0" 
+               Margin="30,20,0,0" 
                TextColor="White" 
                FontAttributes="Bold" 
                FontSize="Title"/>
