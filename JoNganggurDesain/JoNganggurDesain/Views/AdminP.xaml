@@ -12,7 +12,6 @@
         <Frame  BackgroundColor="White"
                 Margin="30,20,20,0"
                 CornerRadius="20"
-                Opacity="0.3"
                 WidthRequest="350"
                 HeightRequest="450">
             
@@ -41,7 +40,7 @@
 
                 <StackLayout Orientation="Horizontal" Spacing="20">
                     <Button 
-                            ImageSource="profil"
+                            ImageSource="gedung"
                             ContentLayout="Top,5"
                             Text="Profil"
                             TextColor="White"
@@ -63,7 +62,7 @@
                 <Button 
                     Margin="0,20,0,20"
                     HorizontalOptions="Center"
-                            ImageSource="globe"
+                            ImageSource="profile"
                             ContentLayout="Top,5"
                             Text="PEKERJA AKTIF"
                             TextColor="White"
