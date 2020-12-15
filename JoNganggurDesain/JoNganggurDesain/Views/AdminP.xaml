@@ -26,7 +26,8 @@
                             CornerRadius="15"                   
                             WidthRequest="120"
                             HeightRequest="120"
-                            BackgroundColor="#FD9500"/>
+                            BackgroundColor="#FD9500"
+                            Clicked="MoveToPostingP"/>
                     <Button 
                             ImageSource="list"
                             ContentLayout="Top,5"
@@ -35,7 +36,8 @@
                             CornerRadius="15"                   
                             WidthRequest="120"
                             HeightRequest="120"
-                            BackgroundColor="#FD9500"/>
+                            BackgroundColor="#FD9500"
+                            Clicked="MoveToLamaranM"/>
                 </StackLayout>
 
 
@@ -48,7 +50,8 @@
                             CornerRadius="15"                   
                             WidthRequest="120"
                             HeightRequest="120"
-                            BackgroundColor="#FD9500"/>
+                            BackgroundColor="#FD9500"
+                            Clicked="MoveToProfil"/>
                     <Button 
                             ImageSource="globe"
                             ContentLayout="Top,5"
@@ -57,7 +60,8 @@
                             CornerRadius="15"                  
                             WidthRequest="120"
                             HeightRequest="120"
-                            BackgroundColor="#FD9500"/>
+                            BackgroundColor="#FD9500"
+                            Clicked="MoveToPekerjaanDiposting"/>
                 </StackLayout>
 
                 <Button 
@@ -70,7 +74,8 @@
                             CornerRadius="15"                  
                             WidthRequest="120"
                             HeightRequest="120"
-                            BackgroundColor="#FD9500"/>
+                            BackgroundColor="#FD9500"
+                            Clicked="MoveToPekerjaAktif"/>
 
             </StackLayout>
 

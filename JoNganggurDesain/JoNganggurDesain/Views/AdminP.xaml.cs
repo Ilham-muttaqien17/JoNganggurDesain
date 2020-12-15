@@ -16,5 +16,25 @@ namespace JoNganggurDesain.Views
         {
             InitializeComponent();
         }
+        async void MoveToPostingP(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new PostingPekerjaan());
+        }
+        async void MoveToLamaranM(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new LamaranMasuk());
+        }
+        async void MoveToProfil(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new ProfilPenyedia());
+        }
+        async void MoveToPekerjaanDiposting(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new PekerjaanDiposting());
+        }
+        async void MoveToPekerjaAktif(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new PekerjaAktif());
+        }
     }
 }

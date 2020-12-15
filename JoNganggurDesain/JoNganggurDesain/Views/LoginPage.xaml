@@ -34,7 +34,7 @@
 
 
         <Frame BackgroundColor="White"
-               Margin="30,20,30,30"
+               Margin="30,20,30,10"
                CornerRadius="20"
                WidthRequest="260"
                HeightRequest="220">
@@ -50,7 +50,14 @@
 
 
         </Frame>
-
+        <StackLayout
+            Orientation="Horizontal" Spacing="10" HorizontalOptions="End" Margin="0,0,30,0">
+            <Label
+                Text="Masuk sebagai Admin" VerticalOptions="Center" TextColor="Red"
+                />
+            <Switch x:Name="Switch"
+                IsToggled="False"/>
+        </StackLayout>
         <Button x:Name="Btn_Signin" Text="Masuk"
                 Margin="30,20,30,20"
                 TextColor="White"

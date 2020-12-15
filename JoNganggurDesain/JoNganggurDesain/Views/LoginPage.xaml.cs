@@ -29,7 +29,12 @@ namespace JoNganggurDesain.Views
 
         async void SignInProcedure(object sender, EventArgs e)
         {
+            if ( )
+            {
+                
+            }
             User user = new User(Entry_Username.Text, Entry_Password.Text);
+            
             if (user.CheckInformation())
             {
                 DisplayAlert("Login", "Login Sukses", "Oke");
@@ -44,5 +49,6 @@ namespace JoNganggurDesain.Views
         {
             await Navigation.PushAsync(new RegistrasiPage());
         }
+        
     }
 }
