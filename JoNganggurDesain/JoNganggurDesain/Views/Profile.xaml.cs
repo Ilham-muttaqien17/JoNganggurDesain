@@ -16,5 +16,20 @@ namespace JoNganggurDesain.Views
         {
             InitializeComponent();
         }
+
+        async void MoveToDashboard(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Dashboard());
+        }
+
+        async void MoveToRiwayat(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new RiwayatPage());
+        }
+
+        async void SignOutProcedure(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new LoginPage());
+        }
     }
 }

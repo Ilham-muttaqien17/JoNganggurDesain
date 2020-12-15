@@ -16,14 +16,14 @@
                        Margin="30,0,30,20"
                        CornerRadius="20"
                        WidthRequest="0"
-                       HeightRequest="50">
+                       HeightRequest="60">
                     <Grid>
                         <StackLayout Orientation="Horizontal" Spacing="30" >
                             <StackLayout>
                                 <Label Grid.Column="0" 
                                        Grid.Row="0"  
                                        Text="Selamat Datang"
-                                       FontSize="Large"
+                                       FontSize="Subtitle"
                                        FontAttributes="Bold"/>
                                 <Label Grid.Column="0" 
                                        Grid.Row="1" 

@@ -28,7 +28,8 @@
                             CornerRadius="25"
                             WidthRequest="130"
                             HeightRequest="50"                
-                            BackgroundColor="#55DEBD"/>
+                            BackgroundColor="#55DEBD"
+                            Clicked="MoveToRegister"/>
         </StackLayout>
 
 

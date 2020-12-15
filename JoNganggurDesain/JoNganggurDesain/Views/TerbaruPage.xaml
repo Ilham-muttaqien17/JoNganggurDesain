@@ -16,12 +16,12 @@
                        Margin="30,20,30,20"
                        CornerRadius="20">
                     <Frame.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="Test"/>
+                        <TapGestureRecognizer Tapped="MoveToDetail"/>
                     </Frame.GestureRecognizers>
                     <StackLayout>
                         <Label Text="Asisten Rumah" FontAttributes="Bold" FontSize="Medium"/>
-                        <Label Text="Dibutuhkan segera"/>
-                        <Label Text="Jl. ASD as"/>
+                        <Label Text="Dibutuhkan segera" FontSize="Subtitle"/>
+                        <Label Text="Jl. ASD as" FontSize="Subtitle"/>
                     </StackLayout>
                 </Frame>
             </StackLayout>

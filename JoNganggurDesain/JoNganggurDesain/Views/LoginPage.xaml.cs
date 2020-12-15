@@ -39,5 +39,10 @@ namespace JoNganggurDesain.Views
                 await DisplayAlert("Login", "Login Gagal", "Oke");
             }
         }
+
+        async void MoveToRegister(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new RegistrasiPage());
+        }
     }
 }

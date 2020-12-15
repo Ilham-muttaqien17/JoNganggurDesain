@@ -17,9 +17,44 @@ namespace JoNganggurDesain.Views
             InitializeComponent();
         }
 
-        void Rekomendasi(object sender, EventArgs e)
+        async void Rekomendasi1(object sender, EventArgs e)
         {
-            DisplayAlert("Mantap","Ada Bos","OK");
+            await Navigation.PushAsync(new DetailPage());
+        }
+
+        async void Rekomendasi2(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new DetailPage());
+        }
+
+        void MoveToLokasi(object sender, EventArgs e)
+        {
+            DisplayAlert("Message", "Comming Soon", "Oke");
+        }
+
+        async void MoveToLamaran(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new LamaranPage());
+        }
+
+        async void MoveToNotifikasi(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new NotifikasiPage());
+        }
+
+        async void MoveToTerbaru(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new TerbaruPage());
+        }
+
+        async void MoveToRiwayat(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new RiwayatPage());
+        }
+
+        async void MoveToProfile(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Profile());
         }
     }
 }

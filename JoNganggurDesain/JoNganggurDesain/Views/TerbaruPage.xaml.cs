@@ -16,9 +16,9 @@ namespace JoNganggurDesain.Views
         {
             InitializeComponent();
         }
-        void Test(object sender, EventArgs e)
+        async void MoveToDetail(object sender, EventArgs e)
         {
-            DisplayAlert("Test", "Mantap", "Oke");
+            await Navigation.PushAsync(new DetailPage());
         }
     }
 }

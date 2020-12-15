@@ -21,5 +21,15 @@ namespace JoNganggurDesain.Views
         {
             DisplayAlert("asd", "zxc", "qwe");
         }
+
+        async void MoveToDashboard(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Dashboard());
+        }
+
+        async void MoveToProfile(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Profile());
+        }
     }
 }

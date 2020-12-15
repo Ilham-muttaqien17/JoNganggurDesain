@@ -21,14 +21,15 @@
                             CornerRadius="25"                
                             WidthRequest="130"
                             HeightRequest="50"
-                            BackgroundColor="#C4C4C4"/>
+                            BackgroundColor="#55DEBD"
+                            Clicked="MoveToLogin"/>
 
                     <Button Text="Daftar" 
                             TextColor="White"
                             CornerRadius="25"
                             WidthRequest="130"
                             HeightRequest="50"                
-                            BackgroundColor="#55DEBD"/>
+                            BackgroundColor="#C4C4C4"/>
                 </StackLayout>
                 
 
@@ -67,7 +68,8 @@
                             RelativeLayout.YConstraint="1000"
                             RelativeLayout.WidthConstraint="125"
                             RelativeLayout.HeightConstraint="50"
-                            BackgroundColor="#FD9500"/>
+                            BackgroundColor="#FD9500"
+                            Clicked="SignUpProcedure"/>
                     </StackLayout>
 
 

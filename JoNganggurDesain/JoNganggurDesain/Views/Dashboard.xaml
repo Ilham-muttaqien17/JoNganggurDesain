@@ -27,7 +27,7 @@
                 WidthRequest="120"
                 HeightRequest="120">
                     <Frame.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="Rekomendasi"/>
+                        <TapGestureRecognizer Tapped="Rekomendasi1"/>
                     </Frame.GestureRecognizers>
 
                 </Frame>
@@ -37,7 +37,7 @@
                 WidthRequest="120"
                 HeightRequest="120">
                     <Frame.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="Rekomendasi"/>
+                        <TapGestureRecognizer Tapped="Rekomendasi2"/>
                     </Frame.GestureRecognizers>
                 </Frame>
             </StackLayout>
@@ -60,7 +60,8 @@
                             CornerRadius="15"                   
                             WidthRequest="110"
                             HeightRequest="110"
-                            BackgroundColor="#FD9500"/>
+                            BackgroundColor="#FD9500"
+                            Clicked="MoveToLokasi"/>
                         <Button 
                             ImageSource="list"
                             ContentLayout="Top,5"
@@ -69,7 +70,8 @@
                             CornerRadius="15"                  
                             WidthRequest="110"
                             HeightRequest="110"
-                            BackgroundColor="#FD9500"/>
+                            BackgroundColor="#FD9500"
+                            Clicked="MoveToLamaran"/>
                     </StackLayout>
 
                     <StackLayout Orientation="Horizontal" Spacing="50" HorizontalOptions="Center">
@@ -81,7 +83,8 @@
                             CornerRadius="15"                  
                             WidthRequest="110"
                             HeightRequest="110"
-                            BackgroundColor="#FD9500"/>
+                            BackgroundColor="#FD9500"
+                            Clicked="MoveToNotifikasi"/>
                         <Button 
                             ImageSource="globe"
                             ContentLayout="Top,5"
@@ -90,7 +93,8 @@
                             CornerRadius="15"                  
                             WidthRequest="110"
                             HeightRequest="110"
-                            BackgroundColor="#FD9500"/>
+                            BackgroundColor="#FD9500"
+                            Clicked="MoveToTerbaru"/>
                     </StackLayout>
 
 
@@ -111,23 +115,25 @@
         </StackLayout>
         <StackLayout Orientation="Horizontal" Spacing="0" VerticalOptions="EndAndExpand" HorizontalOptions="Center" Margin="0,20,0,10">
             <Button 
-                                Text="Home"
-                                TextColor="White"
-                                WidthRequest="100"
-                                HeightRequest="45"
-                                BackgroundColor="#F84E29"/>
+                    Text="Home"
+                    TextColor="White"
+                    WidthRequest="100"
+                    HeightRequest="45"
+                    BackgroundColor="#F84E29"/>
             <Button 
-                                Text="Riwayat"
-                                TextColor="White"
-                                WidthRequest="100"
-                                HeightRequest="45"
-                                BackgroundColor="#F84E29"/>
+                    Text="Riwayat"
+                    TextColor="White"
+                    WidthRequest="100"
+                    HeightRequest="45"
+                    BackgroundColor="#F84E29"
+                    Clicked="MoveToRiwayat"/>
             <Button 
-                                Text="Profile"
-                                TextColor="White"
-                                WidthRequest="100"
-                                HeightRequest="45"
-                                BackgroundColor="#F84E29"/>
+                    Text="Profile"
+                    TextColor="White"
+                    WidthRequest="100"
+                    HeightRequest="45"
+                    BackgroundColor="#F84E29"
+                    Clicked="MoveToProfile"/>
         </StackLayout>
     </Grid>
    

@@ -16,5 +16,16 @@ namespace JoNganggurDesain.Views
         {
             InitializeComponent();
         }
+
+        async void SignUpProcedure(object sender, EventArgs e)
+        {
+            DisplayAlert("Register", "Registrasi Berhasil", "Oke");
+            await Navigation.PushAsync(new LoginPage());
+        }
+
+        async void MoveToLogin(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new LoginPage());
+        }
     }
 }
