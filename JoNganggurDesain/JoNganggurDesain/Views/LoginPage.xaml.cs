@@ -13,6 +13,7 @@ namespace JoNganggurDesain.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class LoginPage : ContentPage
     {
+        public bool verif;
         public LoginPage()
         {
             InitializeComponent();
@@ -29,20 +30,36 @@ namespace JoNganggurDesain.Views
 
         async void SignInProcedure(object sender, EventArgs e)
         {
-            if ( )
+            verif = Switch.IsToggled;
+            if (verif == true )
             {
-                
-            }
-            User user = new User(Entry_Username.Text, Entry_Password.Text);
-            
-            if (user.CheckInformation())
-            {
-                DisplayAlert("Login", "Login Sukses", "Oke");
-                await Navigation.PushAsync(new Dashboard());
+                User user = new User(Entry_Username.Text, Entry_Password.Text);
+
+                if (user.CheckInformation())
+                {
+                    DisplayAlert("Login", "Login Sukses", "Oke");
+                    await Navigation.PushAsync(new AdminP());
+                }
+                else
+                {
+                    await DisplayAlert("Login", "Login Gagal", "Oke");
+                }
+
             } else
             {
-                await DisplayAlert("Login", "Login Gagal", "Oke");
+                User user = new User(Entry_Username.Text, Entry_Password.Text);
+
+                if (user.CheckInformation())
+                {
+                    DisplayAlert("Login", "Login Sukses", "Oke");
+                    await Navigation.PushAsync(new Dashboard());
+                }
+                else
+                {
+                    await DisplayAlert("Login", "Login Gagal", "Oke");
+                }
             }
+            
         }
 
         async void MoveToRegister(object sender, EventArgs e)
