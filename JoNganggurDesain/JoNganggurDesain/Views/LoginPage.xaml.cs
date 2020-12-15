@@ -27,15 +27,16 @@ namespace JoNganggurDesain.Views
             Entry_Password.Completed += (s, e) => SignInProcedure(s, e);
         }
 
-        void SignInProcedure(object sender, EventArgs e)
+        async void SignInProcedure(object sender, EventArgs e)
         {
             User user = new User(Entry_Username.Text, Entry_Password.Text);
             if (user.CheckInformation())
             {
                 DisplayAlert("Login", "Login Sukses", "Oke");
+                await Navigation.PushAsync(new Dashboard());
             } else
             {
-                DisplayAlert("Login", "Login Gagal", "Oke");
+                await DisplayAlert("Login", "Login Gagal", "Oke");
             }
         }
     }

@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="JoNganggurDesain.Views.Profile">
+             x:Class="JoNganggurDesain.Views.Profile"
+             NavigationPage.HasNavigationBar="false">
     <Grid>
         <StackLayout BackgroundColor="#169CC3">
             <Image Source="kerja" Margin="50,20,50,10"/>
