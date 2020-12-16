@@ -68,7 +68,7 @@ namespace JoNganggurDesain.Views
 
                 if (user.CheckInformation())
                 {
-                    DisplayAlert("Login", "Login Sukses", "Oke");
+                    await DisplayAlert("Login", "Login Sukses", "Oke");
                     await Navigation.PushAsync(new AdminP());
                 }
                 else
@@ -82,7 +82,7 @@ namespace JoNganggurDesain.Views
 
                 if (user.CheckInformation())
                 {
-                    DisplayAlert("Login", "Login Sukses", "Oke");
+                    await DisplayAlert("Login", "Login Sukses", "Oke");
                     await Navigation.PushAsync(new Dashboard());
                 }
                 else
@@ -97,6 +97,17 @@ namespace JoNganggurDesain.Views
         {
             await Navigation.PushAsync(new RegistrasiPage());
         }
-        
+
+        protected override bool OnBackButtonPressed()
+        {
+            Device.BeginInvokeOnMainThread(async () =>
+            {
+                var result = await this.DisplayAlert("Peringatan!", "Anda yakin akan keluar?", "Yes", "No");
+                if (result) await this.Navigation.PopAsync();
+            });
+
+            return true;
+        }
+
     }
 }

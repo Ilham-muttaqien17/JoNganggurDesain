@@ -38,15 +38,23 @@
                CornerRadius="20"
                WidthRequest="260"
                HeightRequest="220">
+            <StackLayout Orientation="Horizontal" VerticalOptions="StartAndExpand" Margin="0,10,0,0">
+                <StackLayout VerticalOptions="CenterAndExpand" Spacing="30">
+                    <Image Source="user" HeightRequest="40" WidthRequest="40"/>
+                    <Image Source="password" HeightRequest="40" WidthRequest="40"/>
+                </StackLayout>
+                <StackLayout x:Name="LoginEntry" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
+                    <ActivityIndicator x:Name="ActivitySpinner" Color="Red" IsRunning="True"/>
+                    <Label x:Name="Lbl_Username" Text="Username" TextColor="#0D9876"/>
+                    <Entry x:Name="Entry_Username" Placeholder="Username"/>
+                    <Label x:Name="Lbl_Password" Text="Password" TextColor="#0D9876"/>
+                    <Entry x:Name="Entry_Password" Placeholder="Password" IsPassword="True"/>
 
-            <StackLayout x:Name="LoginEntry" Margin="10">
-                <ActivityIndicator x:Name="ActivitySpinner" Color="Red" IsRunning="True"/>
-                <Label x:Name="Lbl_Username" Text="Username" TextColor="#0D9876"/>
-                <Entry x:Name="Entry_Username" Placeholder="Username"/>
-                <Label x:Name="Lbl_Password" Text="Password" TextColor="#0D9876"/>
-                <Entry x:Name="Entry_Password" Placeholder="Password" IsPassword="True"/>
-
+                </StackLayout>
+                
             </StackLayout>
+
+            
 
 
         </Frame>
@@ -59,6 +67,7 @@
                 IsToggled="False"/>
         </StackLayout>
         <Button x:Name="Btn_Signin" Text="Masuk"
+                VerticalOptions="EndAndExpand"
                 Margin="30,20,30,20"
                 TextColor="White"
                 CornerRadius="25"

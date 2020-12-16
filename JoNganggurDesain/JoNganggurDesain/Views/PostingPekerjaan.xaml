@@ -22,13 +22,13 @@
                                        RelativeLayout.XConstraint="30"
                                        RelativeLayout.YConstraint="250"/>
                         <Label Text="Nama Pekerjaan" TextColor="#0D9876"/>
-                        <Entry Placeholder="Nama Pekerjaan" />
+                        <Entry Text="{Binding Nama}" Placeholder="Nama Pekerjaan" />
                         <Label Text="Gaji" TextColor="#0D9876"/>
-                        <Entry Placeholder="2.000.000" Keyboard="Numeric"  />
-                        <Label Text="Deskripsi" TextColor="#0D9876"  />
-                        <Editor Placeholder="Deskripsi" AutoSize="TextChanges" MaxLength="150" />
+                        <Entry Text="{Binding Gaji}" Placeholder="2.000.000" Keyboard="Numeric"  />
                         <Label Text="Persyaratan" TextColor="#0D9876"  />
-                        <Editor Placeholder="Persyaratan" AutoSize="TextChanges" MaxLength="150" />
+                        <Editor Text="{Binding Syarat}" Placeholder="Persyaratan" AutoSize="TextChanges" MaxLength="150" HeightRequest="100"/>
+                        <Label Text="Deskripsi" TextColor="#0D9876"  />
+                        <Editor Text="{Binding Deskripsi}" Placeholder="Deskripsi" AutoSize="TextChanges" MaxLength="150" HeightRequest="100"/>
                 </StackLayout>
 
                 </Frame>
@@ -40,7 +40,8 @@
                         WidthRequest="350" 
                         HeightRequest="50"
                         Margin="20,0,20,0"
-                 />
+                        Command="{Binding AddPekerjaanCommand}"
+                        Clicked="postingPekerjaan"/>
              </StackLayout>
         </StackLayout>
         

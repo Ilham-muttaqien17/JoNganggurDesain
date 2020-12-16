@@ -12,18 +12,41 @@
                    FontAttributes="Bold"
                    />
             <StackLayout>
-                <Frame BackgroundColor="#55DEBD"
-                       Margin="30,20,30,20"
-                       CornerRadius="20">
-                    <Frame.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="MoveToDetail"/>
-                    </Frame.GestureRecognizers>
-                    <StackLayout>
-                        <Label Text="Asisten Rumah" FontAttributes="Bold" FontSize="Medium"/>
-                        <Label Text="Dibutuhkan segera" FontSize="Subtitle"/>
-                        <Label Text="Jl. ASD as" FontSize="Subtitle"/>
-                    </StackLayout>
-                </Frame>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"></RowDefinition>
+                        <RowDefinition Height="auto"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <ListView Grid.Row="0" HasUnevenRows="True" ItemsSource="{Binding Pekerjaan}">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <StackLayout>
+                                        <Frame BackgroundColor="#55DEBD"
+                                           Margin="30,20,30,0"
+                                           CornerRadius="30">
+                                            <Frame.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="MoveToDetail"/>
+                                            </Frame.GestureRecognizers>
+
+                                            <StackLayout>
+                                                <Label Text="{Binding Nama}" FontAttributes="Bold" FontSize="Medium"/>
+                                                <Label Text="Dibutuhkan segera" FontSize="Subtitle"/>
+                                                <Label Text="Jl. ASD as" FontSize="Subtitle"/>
+                                            </StackLayout>
+                                        </Frame>
+                                    </StackLayout>
+                                    
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                        
+                    </ListView>
+
+                    
+
+                </Grid>
+                
             </StackLayout>
         </StackLayout>
     </ScrollView>

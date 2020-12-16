@@ -86,5 +86,16 @@ namespace JoNganggurDesain.Views
         {
             await Navigation.PushAsync(new Profile());
         }
+
+        protected override bool OnBackButtonPressed()
+        {
+            Device.BeginInvokeOnMainThread(async () =>
+            {
+                var result = await this.DisplayAlert("Peringatan!", "Anda yakin akan keluar?", "Yes", "No");
+                if (result) await this.Navigation.PopAsync();
+            });
+
+            return true;
+        }
     }
 }
