@@ -12,7 +12,7 @@ namespace JoNganggurDesain.ViewModel {
         public class FirebaseHelper
         {
             //Connect app with firebase using API Url  
-            public static FirebaseClient firebase = new FirebaseClient("https://testlogin-fa8bc-default-rtdb.firebaseio.com/");
+            public static FirebaseClient firebase = new FirebaseClient("https://jonganggur-b20fe-default-rtdb.firebaseio.com/");
 
             //Read All    
             public static async Task<List<Pelamar>> GetAllPelamar()
