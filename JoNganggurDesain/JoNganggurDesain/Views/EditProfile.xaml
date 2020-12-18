@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="JoNganggurDesain.Views.Profile"
-             NavigationPage.HasNavigationBar="false">
+             x:Class="JoNganggurDesain.Views.EditProfile"
+            NavigationPage.HasNavigationBar="false">
     <Grid>
         <StackLayout BackgroundColor="#169CC3">
             <Image Source="kerja" Margin="50,20,50,10"/>
@@ -21,75 +21,49 @@
                            HeightRequest="750">
 
                         <StackLayout>
-                            <Label Text="Informasi Akun"
+                            <Label Text="Edit Profil"
                                    TextColor="Black"
                                    FontSize="Large"
                                    FontAttributes="Bold"
                                    RelativeLayout.XConstraint="30"
                                    RelativeLayout.YConstraint="250"/>
                             <Label Text="Nama Lengkap" TextColor="#0D9876"/>
-                            <Entry x:Name="txtNama" Placeholder="Nama lengkap" IsReadOnly="True"/>
+                            <Entry Placeholder="Nama lengkap" IsReadOnly="False"/>
                             <Label Text="Username" TextColor="#0D9876"/>
-                            <Entry x:Name="txtUsername" Placeholder="Username" IsReadOnly="True" />
+                            <Entry Placeholder="Username" IsReadOnly="False" />
                             <Label Text="Password" TextColor="#0D9876"/>
-                            <Entry x:Name="txtPassword" Placeholder="Password" IsPassword="True" IsReadOnly="True" />
+                            <Entry Placeholder="Password" IsPassword="True" IsReadOnly="False" />
                             <Label Text="Tanggal lahir" TextColor="#0D9876"/>
-                            <DatePicker x:Name="dateTglLahir" MinimumDate="01/01/1970" MaximumDate="01/01/2020" Date="01/01/2000"/>
+                            <DatePicker MinimumDate="01/01/1970" MaximumDate="01/01/2020" Date="01/01/2000"/>
                             <Label Text="Email" TextColor="#0D9876"/>
-                            <Entry x:Name="txtEmail" Placeholder="Email" IsReadOnly="True"/>
+                            <Entry Placeholder="Email" IsReadOnly="False"/>
                             <Label Text="Kontak" TextColor="#0D9876"/>
-                            <Entry x:Name="txtKontak" Placeholder="621111111" Keyboard="Numeric" IsReadOnly="True" />
+                            <Entry Placeholder="621111111" Keyboard="Numeric" IsReadOnly="False" />
                             <Label Text="Deskripsi anda" TextColor="#0D9876"  />
-                            <Editor x:Name="txtDeskripsi" Placeholder="Deskripsi anda" AutoSize="TextChanges" IsReadOnly="True" HeightRequest="120"/>
+                            <Editor Placeholder="Deskripsi anda" AutoSize="TextChanges" IsReadOnly="False" HeightRequest="120"/>
 
                             <StackLayout Orientation="Horizontal" Spacing="20" HorizontalOptions="Center">
-                                <Button Text="EDIT"
+                                <Button Text="UPDATE"
                                         CornerRadius="20"
                                         BackgroundColor="#FD9500"
                                         WidthRequest="100"
                                         HeightRequest="40"
-                                        Clicked="MoveToEditProfile"/>
-                                <Button Text="LOGOUT"
+                                        Clicked="UpdateProfileProcedure"/>
+                                <Button Text="BATAL"
                                         BackgroundColor="#FD9500"
                                         CornerRadius="20"
                                         WidthRequest="100"
                                         HeightRequest="40"
-                                        Clicked="SignOutProcedure"/>
+                                        Clicked="MoveToProfile"/>
                             </StackLayout>
 
 
                         </StackLayout>
 
                     </Frame>
-                    
 
                 </StackLayout>
             </ScrollView>
-
-
         </StackLayout>
-        <StackLayout Orientation="Horizontal" Spacing="0" VerticalOptions="EndAndExpand" HorizontalOptions="Center" Margin="0,20,0,10">
-            <Button 
-                    Text="Home"
-                    TextColor="White"
-                    WidthRequest="100"
-                    HeightRequest="45"
-                    BackgroundColor="#F84E29"
-                    Clicked="MoveToDashboard"/>
-            <Button 
-                    Text="Riwayat"
-                    TextColor="White"
-                    WidthRequest="100"
-                    HeightRequest="45"
-                    BackgroundColor="#F84E29"
-                    Clicked="MoveToRiwayat"/>
-            <Button 
-                    Text="Profile"
-                    TextColor="White"
-                    WidthRequest="100"
-                    HeightRequest="45"
-                    BackgroundColor="#F84E29"/>
-        </StackLayout>
-
     </Grid>
 </ContentPage>

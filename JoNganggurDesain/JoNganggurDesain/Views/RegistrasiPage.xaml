@@ -50,7 +50,7 @@
                         <Label Text="Password" TextColor="#0D9876"/>
                         <Entry Text="{Binding Password}" Placeholder="Password" IsPassword="True" />
                         <Label Text="Konfirmasi password" TextColor="#0D9876"/>
-                        <Entry Placeholder="Ketik ulang password" IsPassword="True"/>
+                        <Entry Text="{Binding ConfirmPassword}" Placeholder="Ketik ulang password" IsPassword="True"/>
                         <Label Text="Tanggal lahir" TextColor="#0D9876"/>
                         <DatePicker Date="{Binding Tgl_lahir}" MinimumDate="01/01/1970" MaximumDate="01/01/2020"/>
                         <Label Text="Email" TextColor="#0D9876"/>
@@ -69,7 +69,6 @@
                             RelativeLayout.WidthConstraint="125"
                             RelativeLayout.HeightConstraint="50"
                             BackgroundColor="#FD9500"
-                            Clicked="SignUpProcedure"
                             Command="{Binding AddPelamarCommand}"/>
                     </StackLayout>
 

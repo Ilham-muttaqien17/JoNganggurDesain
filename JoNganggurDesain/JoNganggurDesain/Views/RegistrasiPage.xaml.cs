@@ -15,9 +15,13 @@ namespace JoNganggurDesain.Views
     {
         public RegistrasiPage()
         {
+            SignUpVM signUpVM;
             InitializeComponent();
+            signUpVM = new SignUpVM();
+            //set binding    
+            BindingContext = signUpVM;
             CheckConnectivity();
-            BindingContext = new PelamarViewmodel();
+            //BindingContext = new PelamarViewmodel();
         }
 
         void CheckConnectivity()

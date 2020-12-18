@@ -45,5 +45,13 @@ namespace JoNganggurDesain.Views
                 }
             };
         }
+        async void SignOutProcedure(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new LoginPage());
+        }
+        async void MoveToEditProfilPenyedia(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new EditProfilPenyedia());
+        }
     }
 }

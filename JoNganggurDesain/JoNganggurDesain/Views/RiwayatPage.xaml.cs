@@ -54,7 +54,7 @@ namespace JoNganggurDesain.Views
 
         async void MoveToDashboard(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new Dashboard());
+            //await Navigation.PushAsync(new Dashboard(Username));
         }
 
         async void MoveToProfile(object sender, EventArgs e)

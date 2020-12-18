@@ -4,40 +4,60 @@
              x:Class="JoNganggurDesain.Views.LamaranMasuk"
              NavigationPage.HasNavigationBar="false">
 
-        <ScrollView>
-            <StackLayout BackgroundColor="#169CC3" VerticalOptions="FillAndExpand">
+    <ScrollView>
+        <StackLayout BackgroundColor="#169CC3" VerticalOptions="FillAndExpand">
 
-                <!-- Box Riwayat -->
+            <!-- Box Riwayat -->
 
+            <Label Text="Lamaran Masuk" 
+                               Margin="30,30,30,0" 
+                               TextColor="White" 
+                               FontAttributes="Bold"
+                               FontSize="Large"/>
 
-
-                    <Label Text="Lamaran Masuk" Margin="30,20,0,20" TextColor="White" FontAttributes="Bold" FontSize="Large"/>
-
-                    <Frame BackgroundColor="White"
-                           Margin="30,0,30,0"
-                            CornerRadius="20"
-                            WidthRequest="270"
-                            HeightRequest="70">
-                        <Frame.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="Cek"/>
-                        </Frame.GestureRecognizers>
-                        
-                        <StackLayout>
-                            <Label Text="Taufiq" 
+            <Frame BackgroundColor="White"
+                               Margin="30,20,30,20"
+                                CornerRadius="20"
+>
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="Cek"/>
+                </Frame.GestureRecognizers>
+                <Grid>
+                    <StackLayout  Orientation="Horizontal" Spacing="30">
+                        <StackLayout >
+                            <Label Grid.Column="0"
+                                       Grid.Row="0" 
+                                       Text="Taufiq"
                                        TextColor="Black"
                                        FontAttributes="Bold" FontSize="Subtitle"/>
-                            <Label Text="Melamar di tempat Anda!" 
-                                       TextColor="Black" FontSize="Small"/>
-                            <Label Text="Pekerjaan : Arsitek" 
-                                       TextColor="Black" FontSize="Small"/>
+                            <Label Grid.Column="0"
+                                       Grid.Row="1"
+                                       Text="Melamar di Tempat Anda!"
+                                       TextColor="Black"
+                                       FontSize="Subtitle"/>
+                            <Label Grid.Column="0"
+                                       Grid.Row="2"
+                                       Text="Pekerjaan : Arsitek"
+                                       TextColor="Black" FontSize="Subtitle"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" Spacing="10" HorizontalOptions="EndAndExpand">
+                            <Image Source="done"
+                                       Grid.Column="1"
+                                       Grid.Row="1"/>
+                            <Image Source="delete"
+                                       Grid.Column="1"
+                                       Grid.Row="0"/>
 
                         </StackLayout>
+                    </StackLayout>
+                </Grid>
 
-                    </Frame>
+
+            </Frame>
 
 
-            </StackLayout>
+        </StackLayout>
 
-        </ScrollView>
+    </ScrollView>
 
 </ContentPage>

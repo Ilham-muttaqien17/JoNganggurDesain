@@ -44,18 +44,15 @@
                     <Image Source="password" HeightRequest="40" WidthRequest="40"/>
                 </StackLayout>
                 <StackLayout x:Name="LoginEntry" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
-                    <ActivityIndicator x:Name="ActivitySpinner" Color="Red" IsRunning="True"/>
+                    <!-- <ActivityIndicator x:Name="ActivitySpinner" Color="Red" IsRunning="True"/> -->
                     <Label x:Name="Lbl_Username" Text="Username" TextColor="#0D9876"/>
-                    <Entry x:Name="Entry_Username" Placeholder="Username"/>
+                    <Entry x:Name="Entry_Username" Text="{Binding Username}" Placeholder="Username"/>
                     <Label x:Name="Lbl_Password" Text="Password" TextColor="#0D9876"/>
-                    <Entry x:Name="Entry_Password" Placeholder="Password" IsPassword="True"/>
+                    <Entry x:Name="Entry_Password" Text="{Binding Password}" Placeholder="Password" IsPassword="True"/>
 
                 </StackLayout>
                 
             </StackLayout>
-
-            
-
 
         </Frame>
         <StackLayout
@@ -74,7 +71,7 @@
                 WidthRequest="125"
                 HeightRequest="50"
                 BackgroundColor="#FD9500"
-                Clicked="SignInProcedure"/>
+                Command="{Binding LoginCommand}"/>
 
 
     </StackLayout>

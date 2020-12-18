@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="JoNganggurDesain.Views.ProfilPenyedia"
+             x:Class="JoNganggurDesain.Views.EditProfilPenyedia"
              NavigationPage.HasNavigationBar="false">
     <Grid>
         <StackLayout BackgroundColor="#169CC3">
@@ -20,40 +20,40 @@
                            HeightRequest="500">
 
                         <StackLayout>
-                            <Label Text="Profil Perusahaan"
+                            <Label Text="Edit Profil Perusahaan"
                                    TextColor="Black"
                                    FontSize="Large"
                                    FontAttributes="Bold"
                                    RelativeLayout.XConstraint="30"
                                    RelativeLayout.YConstraint="250"/>
                             <Label Text="Nama Perusahaan" TextColor="#0D9876"/>
-                            <Entry Placeholder="Nama lengkap" IsReadOnly="True"/>
+                            <Entry Placeholder="Nama lengkap" IsReadOnly="False"/>
                             <Label Text="Tentang Perusahaan" TextColor="#0D9876"/>
-                            <Editor Placeholder="Tentang Perusahaan" AutoSize="TextChanges" MaxLength="150" IsReadOnly="True" />
+                            <Editor Placeholder="Tentang Perusahaan" AutoSize="TextChanges" MaxLength="150" IsReadOnly="False" />
                             <Label Text="Alamat" TextColor="#0D9876"/>
-                            <Editor Placeholder="Alamat" AutoSize="TextChanges" MaxLength="150" IsReadOnly="True" />
+                            <Editor Placeholder="Alamat" AutoSize="TextChanges" MaxLength="150" IsReadOnly="False" />
                             <Label Text="Username" TextColor="#0D9876"/>
-                            <Entry Placeholder="Username" IsReadOnly="True" />
+                            <Entry Placeholder="Username" IsReadOnly="False" />
                             <Label Text="Password" TextColor="#0D9876"/>
-                            <Entry Placeholder="Password" IsPassword="True" IsReadOnly="True" />
+                            <Entry Placeholder="Password" IsPassword="True" IsReadOnly="False" />
 
                             <StackLayout Orientation="Horizontal" Spacing="20" HorizontalOptions="Center" Margin="0,20,0,20">
                                 <Button TextColor="White"
-                                    Text="EDIT"
+                                    Text="UPDATE"
                                     CornerRadius="15"
                                     FontAttributes="Bold" 
                                     BackgroundColor="#F84E29"   
                                     WidthRequest="120" 
                                     HeightRequest="50"
-                                    Clicked="MoveToEditProfilPenyedia"/>
+                                    Clicked="UpdateProfilPenyedia"/>
                                 <Button TextColor="White"
-                                    Text="LOGOUT"
+                                    Text="BATAL"
                                     CornerRadius="15"
                                     FontAttributes="Bold" 
                                     BackgroundColor="#F84E29"   
                                     WidthRequest="120" 
                                     HeightRequest="50"
-                                    Clicked="SignOutProcedure"/>
+                                    Clicked="MoveToProfilPenyedia"/>
                             </StackLayout>
 
                         </StackLayout>

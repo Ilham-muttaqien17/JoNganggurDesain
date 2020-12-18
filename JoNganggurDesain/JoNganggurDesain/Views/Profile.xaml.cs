@@ -49,12 +49,16 @@ namespace JoNganggurDesain.Views
 
         async void MoveToDashboard(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new Dashboard());
+            //await Navigation.PushAsync(new Dashboard(Username));
         }
 
         async void MoveToRiwayat(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new RiwayatPage());
+        }
+        async void MoveToEditProfile(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new EditProfile());
         }
 
         async void SignOutProcedure(object sender, EventArgs e)
