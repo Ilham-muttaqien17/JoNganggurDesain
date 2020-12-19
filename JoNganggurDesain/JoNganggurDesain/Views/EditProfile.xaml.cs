@@ -18,7 +18,7 @@ namespace JoNganggurDesain.Views
         }
         async void MoveToProfile(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new Profile());
+            //await Navigation.PushAsync(new Profile());
         }
         async void UpdateProfileProcedure(object sender, EventArgs e)
         {

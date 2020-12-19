@@ -133,7 +133,10 @@
                     WidthRequest="100"
                     HeightRequest="45"
                     BackgroundColor="#F84E29"
-                    Clicked="MoveToProfile"/>
+                    Command="{Binding ProfilCommand}"/>
+                    <!-- Clicked="MoveToProfile" -->
+                    
+                
         </StackLayout>
     </Grid>
    

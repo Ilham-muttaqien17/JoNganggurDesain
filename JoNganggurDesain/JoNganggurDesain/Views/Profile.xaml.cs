@@ -7,16 +7,21 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using JoNganggurDesain.ViewModel;
 
 namespace JoNganggurDesain.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Profile : ContentPage
     {
-        public Profile()
+        DashboardVM dashboardVM;
+        public Profile(string username)
         {
             InitializeComponent();
+            dashboardVM = new DashboardVM(username);
+            BindingContext = dashboardVM;
             CheckConnectivity();
+
         }
 
         void CheckConnectivity()

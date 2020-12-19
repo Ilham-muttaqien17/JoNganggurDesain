@@ -5,6 +5,8 @@ using Xamarin.Forms;
 using JoNganggurDesain.Models;
 using System.ComponentModel;
 
+using JoNganggurDesain.Views;
+
 namespace JoNganggurDesain.ViewModel
 {
     public class DashboardVM : INotifyPropertyChanged
@@ -33,15 +35,15 @@ namespace JoNganggurDesain.ViewModel
                 PropertyChanged(this, new PropertyChangedEventArgs("Password"));
             }
         }
- /*       public Command UpdateCommand
-        {
-            get { return new Command(Update); }
-        }
+        /*       public Command UpdateCommand
+               {
+                   get { return new Command(Update); }
+               }
 
-        public Command DeleteCommand
-        {
-            get { return new Command(Delete); }
-        }*/
+               public Command DeleteCommand
+               {
+                   get { return new Command(Delete); }
+               }*/
         //For Logout
         public Command LogoutCommand
         {
@@ -54,7 +56,18 @@ namespace JoNganggurDesain.ViewModel
             }
         }
         //Update user data
- 
+
         //Delete user data
+        public Command ProfilCommand
+        {
+            get
+            {
+                return new Command(ProfilShow);
+            }
+        }
+        private async void ProfilShow()
+        {
+            await App.Current.MainPage.Navigation.PushAsync(new Profile(Username));
+        }
     }
 }

@@ -28,9 +28,9 @@
                                    RelativeLayout.XConstraint="30"
                                    RelativeLayout.YConstraint="250"/>
                             <Label Text="Nama Lengkap" TextColor="#0D9876"/>
-                            <Entry x:Name="txtNama" Placeholder="Nama lengkap" IsReadOnly="True"/>
+                            <Entry x:Name="txtNama" Text="{Binding Password, StringFormat='{0}'}" Placeholder="Nama lengkap" IsReadOnly="True"/>
                             <Label Text="Username" TextColor="#0D9876"/>
-                            <Entry x:Name="txtUsername" Placeholder="Username" IsReadOnly="True" />
+                            <Entry x:Name="txtUsername" Text="{Binding Username, StringFormat='{0}'}" Placeholder="Username" IsReadOnly="True" />
                             <Label Text="Password" TextColor="#0D9876"/>
                             <Entry x:Name="txtPassword" Placeholder="Password" IsPassword="True" IsReadOnly="True" />
                             <Label Text="Tanggal lahir" TextColor="#0D9876"/>
