@@ -125,7 +125,7 @@ namespace JoNganggurDesain.ViewModel
                     await App.Current.MainPage.DisplayAlert("Daftar Sukses", "", "Ok");
                     //Navigate to Wellcom page after successfuly SignUp    
                     //pass user email to welcom page    
-                    await App.Current.MainPage.Navigation.PushAsync(new Dashboard(Username));
+                    await App.Current.MainPage.Navigation.PushAsync(new LoginPage());
                 }
                 else
                     await App.Current.MainPage.DisplayAlert("Error", "Daftar Gagal", "OK");
