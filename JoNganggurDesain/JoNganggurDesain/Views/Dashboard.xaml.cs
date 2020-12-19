@@ -8,19 +8,32 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using JoNganggurDesain.ViewModel;
+using System.ComponentModel;
 
 namespace JoNganggurDesain.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Dashboard : ContentPage
+    public partial class Dashboard : ContentPage, INotifyPropertyChanged
     {
         DashboardVM dashboardVM;
+        
         public Dashboard(string username)
         {
+            Username = username;
             InitializeComponent();
             dashboardVM = new DashboardVM(username);
             BindingContext = dashboardVM;
             CheckConnectivity();
+        }
+
+        private string username;
+        public string Username
+        {
+            get { return username; }
+            set
+            {
+                username = value;
+            }
         }
 
         void CheckConnectivity()
@@ -88,7 +101,7 @@ namespace JoNganggurDesain.Views
 
         async void MoveToProfile(object sender, EventArgs e)
         {
-            //await Navigation.PushAsync(new Profile(username));
+            await Navigation.PushAsync(new Profile(username));
         }
 
         protected override bool OnBackButtonPressed()

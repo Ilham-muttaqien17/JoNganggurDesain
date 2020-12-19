@@ -133,7 +133,7 @@
                     WidthRequest="100"
                     HeightRequest="45"
                     BackgroundColor="#F84E29"
-                    Command="{Binding ProfilCommand}"/>
+                    Clicked="MoveToProfile"/>
                     <!-- Clicked="MoveToProfile" -->
                     
                 
