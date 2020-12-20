@@ -56,7 +56,7 @@
                         <Label Text="Email" TextColor="#0D9876"/>
                         <Entry Text="{Binding Email}" Placeholder="Email"/>
                         <Label Text="Kontak" TextColor="#0D9876"/>
-                        <Entry Text="{Binding Kontak}" Placeholder="Gunakan awalan 62" Keyboard="Numeric" />
+                        <Entry Text="{Binding Kontak}" Placeholder="0811111111" Keyboard="Numeric" />
                         <Label Text="Deskripsi anda" TextColor="#0D9876"  />
                         <Editor Text="{Binding Deskripsi}" Placeholder="Deskripsi anda"  HeightRequest="120" MaxLength="100"/>
 

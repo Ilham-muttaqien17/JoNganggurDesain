@@ -60,7 +60,7 @@ namespace JoNganggurDesain.ViewModel {
             }
 
             //Inser a user    
-          public static async Task<bool> AddPelamar(string nama, string username, string password, DateTime tgl_lahir, string email, int kontak, string deskripsi)
+          public static async Task<bool> AddPelamar(string nama, string username, string password, DateTime tgl_lahir, string email, string kontak, string deskripsi)
             {
                 try
                 {
@@ -77,7 +77,7 @@ namespace JoNganggurDesain.ViewModel {
             }
 
             //Update     
-            public static async Task<bool> UpdatePelamar(string nama, string username, string password, DateTime tgl_lahir, string email, int kontak, string deskripsi)
+            public static async Task<bool> UpdatePelamar(string nama, string username, string password, DateTime tgl_lahir, string email, string kontak, string deskripsi)
             {
                 try
                 {

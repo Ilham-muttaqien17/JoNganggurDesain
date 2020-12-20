@@ -87,8 +87,8 @@ namespace JoNganggurDesain.ViewModel
                 PropertyChanged(this, new PropertyChangedEventArgs("Email"));
             }
         }
-        private int kontak;
-        public int Kontak
+        private string kontak;
+        public string Kontak
         {
             get { return kontak; }
             set

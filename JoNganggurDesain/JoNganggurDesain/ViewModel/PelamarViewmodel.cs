@@ -17,7 +17,7 @@ namespace JoNganggurDesain.ViewModel
         public string Password { get; set; }
         public DateTime Tgl_lahir { get; set; }
         public string Email { get; set; }
-        public int Kontak { get; set; }
+        public string Kontak { get; set; }
         public string Deskripsi { get; set; }
 
         private DBFirebase services;
@@ -44,7 +44,7 @@ namespace JoNganggurDesain.ViewModel
             AddPelamarCommand = new Command(async () => await addPelamarAsync(Nama, Username, Password, Tgl_lahir, Email, Kontak, Deskripsi));
         }
 
-        public async Task addPelamarAsync(string Nama, string Username, string Password, DateTime Tgl_lahir, string Email, int Kontak, string Deskripsi)
+        public async Task addPelamarAsync(string Nama, string Username, string Password, DateTime Tgl_lahir, string Email, string Kontak, string Deskripsi)
         {
             await services.AddPelamar(Nama, Username, Password, Tgl_lahir, Email, Kontak, Deskripsi);
         }

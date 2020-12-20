@@ -11,7 +11,7 @@ namespace JoNganggurDesain.Models
         public string Password { get; set; }
         public DateTime Tgl_lahir { get; set; }
         public string Email { get; set; }
-        public int Kontak { get; set; }
+        public string Kontak { get; set; }
         public string Deskripsi { get; set; }
     }
 }

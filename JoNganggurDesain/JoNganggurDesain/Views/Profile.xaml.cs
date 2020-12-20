@@ -51,7 +51,7 @@ namespace JoNganggurDesain.Views
                     dateTglLahir.Date = person.Tgl_lahir;
                     txtEmail.Text = person.Email;
                     txtDeskripsi.Text = person.Deskripsi;
-                    txtKontak.Text = person.Kontak.ToString();
+                    txtKontak.Text = person.Kontak;
                     titleUsername.Text = txtUsername.Text;
                 }
                 

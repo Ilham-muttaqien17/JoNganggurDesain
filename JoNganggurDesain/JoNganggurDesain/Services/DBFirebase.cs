@@ -36,7 +36,7 @@ namespace JoNganggurDesain.Services
             return pekerjaanData;
         }
 
-        public async Task AddPelamar(string nama, string username, string password, DateTime tgl_lahir, string email, int kontak, string deskripsi)
+        public async Task AddPelamar(string nama, string username, string password, DateTime tgl_lahir, string email, string kontak, string deskripsi)
         {
             Pelamar p = new Pelamar()
             {
