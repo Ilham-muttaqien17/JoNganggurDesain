@@ -103,7 +103,7 @@ namespace JoNganggurDesain.Views
         }
         async void MoveToEditProfile(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new EditProfile());
+            await Navigation.PushAsync(new EditProfile(username));
         }
 
         async void SignOutProcedure(object sender, EventArgs e)

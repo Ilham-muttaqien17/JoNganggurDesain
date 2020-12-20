@@ -6,9 +6,6 @@
     <Grid>
         <StackLayout BackgroundColor="#169CC3">
             <Image Source="kerja" Margin="50,20,50,10"/>
-            <Label Text="User" TextColor="White" 
-                   FontSize="Large" FontAttributes="Bold" 
-                   HorizontalTextAlignment="Center" Margin="0,0,0,10"/>
 
             <ScrollView>
                 <StackLayout BackgroundColor="#169CC3">
@@ -28,19 +25,19 @@
                                    RelativeLayout.XConstraint="30"
                                    RelativeLayout.YConstraint="250"/>
                             <Label Text="Nama Lengkap" TextColor="#0D9876"/>
-                            <Entry Placeholder="Nama lengkap" IsReadOnly="False"/>
+                            <Entry x:Name="txtNama" Text="{Binding Nama}" Placeholder="Nama lengkap" />
                             <Label Text="Username" TextColor="#0D9876"/>
-                            <Entry Placeholder="Username" IsReadOnly="False" />
+                            <Entry x:Name="txtUsername" Text="{Binding Username}" Placeholder="Username" />
                             <Label Text="Password" TextColor="#0D9876"/>
-                            <Entry Placeholder="Password" IsPassword="True" IsReadOnly="False" />
+                            <Entry x:Name="txtPassword" Text="{Binding Password}" Placeholder="Password" IsPassword="True" />
                             <Label Text="Tanggal lahir" TextColor="#0D9876"/>
-                            <DatePicker MinimumDate="01/01/1970" MaximumDate="01/01/2020" Date="01/01/2000"/>
+                            <DatePicker x:Name="dateTglLahir" Date="{Binding Tgl_lahir}" MinimumDate="01/01/1970" MaximumDate="01/01/2020"/>
                             <Label Text="Email" TextColor="#0D9876"/>
-                            <Entry Placeholder="Email" IsReadOnly="False"/>
+                            <Entry x:Name="txtEmail" Text="{Binding Email}" Placeholder="Email"/>
                             <Label Text="Kontak" TextColor="#0D9876"/>
-                            <Entry Placeholder="621111111" Keyboard="Numeric" IsReadOnly="False" />
+                            <Entry x:Name="txtKontak" Text="{Binding Kontak}" Placeholder="621111111" Keyboard="Numeric" />
                             <Label Text="Deskripsi anda" TextColor="#0D9876"  />
-                            <Editor Placeholder="Deskripsi anda" AutoSize="TextChanges" IsReadOnly="False" HeightRequest="120"/>
+                            <Editor x:Name="txtDeskripsi" Text="{Binding Deskripsi}" Placeholder="Deskripsi anda" AutoSize="TextChanges" HeightRequest="120"/>
 
                             <StackLayout Orientation="Horizontal" Spacing="20" HorizontalOptions="Center">
                                 <Button Text="UPDATE"
@@ -48,7 +45,8 @@
                                         BackgroundColor="#FD9500"
                                         WidthRequest="100"
                                         HeightRequest="40"
-                                        Clicked="UpdateProfileProcedure"/>
+                                        Clicked="UpdateProfileProcedure"
+                                        Command="{Binding UpdateCommand}"/>
                                 <Button Text="BATAL"
                                         BackgroundColor="#FD9500"
                                         CornerRadius="20"

@@ -6,6 +6,7 @@ using JoNganggurDesain.Models;
 using System.ComponentModel;
 
 using JoNganggurDesain.Views;
+using System.Diagnostics;
 
 namespace JoNganggurDesain.ViewModel
 {
@@ -35,15 +36,79 @@ namespace JoNganggurDesain.ViewModel
                 PropertyChanged(this, new PropertyChangedEventArgs("Password"));
             }
         }
-        /*       public Command UpdateCommand
-               {
-                   get { return new Command(Update); }
-               }
+        private string nama;
 
-               public Command DeleteCommand
-               {
-                   get { return new Command(Delete); }
-               }*/
+        public string Nama
+        {
+            get { return nama; }
+            set { nama = value; }
+        }
+
+        private DateTime tgl_lahir;
+
+        public DateTime Tgl_lahir
+        {
+            get { return tgl_lahir; }
+            set { tgl_lahir = value; }
+        }
+
+        private string email;
+
+        public string Email
+        {
+            get { return email; }
+            set { email = value; }
+        }
+
+        private string kontak;
+
+        public string Kontak
+        {
+            get { return kontak; }
+            set { kontak = value; }
+        }
+
+        private string deskripsi;
+
+        public string Deskripsi
+        {
+            get { return deskripsi; }
+            set { deskripsi = value; }
+        }
+
+        public Command UpdateCommand
+        {
+            get { return new Command(Update); }
+        }
+
+        private async void Update()
+        {
+            try
+            {
+                if (!string.IsNullOrEmpty(Password))
+                {
+                    var isupdate = await FirebaseHelper.UpdatePelamar(Nama,  Username,  Password,  Tgl_lahir,  Email,  Kontak,  Deskripsi);
+                    if (isupdate)
+                    {
+                        await App.Current.MainPage.DisplayAlert("Update Success", "", "Ok");
+                        await App.Current.MainPage.Navigation.PushAsync(new Profile(username));
+                    }
+                    else
+                    {
+                        await App.Current.MainPage.DisplayAlert("Error", "Record not update", "Ok");
+                    }
+                        
+                }
+                else
+                    await App.Current.MainPage.DisplayAlert("Password Require", "Please Enter your password", "Ok");
+            }
+            catch (Exception e)
+            {
+
+                Debug.WriteLine($"Error:{e}");
+            }
+        }
+
         //For Logout
         public Command LogoutCommand
         {
