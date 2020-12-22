@@ -20,6 +20,15 @@ namespace JoNganggurDesain.Views
             CheckConnectivity();
             BindingContext = new PekerjaanViewModel();
         }
+        private string username;
+        public string Username
+        {
+            get { return username; }
+            set
+            {
+                username = value;
+            }
+        }
         void CheckConnectivity()
         {
             CheckConnectivityOnStart();
@@ -54,7 +63,7 @@ namespace JoNganggurDesain.Views
             if(Conn == true)
             {
                 await DisplayAlert("Pesan", "Berhasil memposting pekerjaan", "Oke");
-                await Navigation.PushAsync(new AdminP());
+                await Navigation.PushAsync(new AdminP(Username));
             } else
             {
                 await DisplayAlert("Peringatan", "Tidak ada sambungan internet", "Oke");

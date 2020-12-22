@@ -2,10 +2,11 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="JoNganggurDesain.Views.Profile"
+             xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
              NavigationPage.HasNavigationBar="false">
     <Grid>
         <StackLayout BackgroundColor="#169CC3">
-            <Image Source="kerja" Margin="50,20,50,10"/>
+            <controls:CircleImage Source="kerja" HeightRequest="120" WidthRequest="120" Margin="50,20,50,10"/>
             <Label x:Name="titleUsername" TextColor="White" 
                    FontSize="Large" FontAttributes="Bold" 
                    HorizontalTextAlignment="Center" Margin="0,0,0,10"/>

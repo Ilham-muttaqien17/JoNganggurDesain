@@ -1,4 +1,5 @@
-﻿using Plugin.Connectivity;
+﻿using JoNganggurDesain.ViewModel;
+using Plugin.Connectivity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,11 +14,26 @@ namespace JoNganggurDesain.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class AdminP : ContentPage
     {
-        public AdminP()
+        AdminPVM adminPVM;
+        public AdminP(string username)
         {
+            Username = username;
             InitializeComponent();
+            adminPVM = new AdminPVM(username);
+            BindingContext = adminPVM;
             CheckConnectivity();
         }
+
+        private string username;
+        public string Username
+        {
+            get { return username; }
+            set
+            {
+                username = value;
+            }
+        }
+
 
         void CheckConnectivity()
         {
@@ -56,7 +72,7 @@ namespace JoNganggurDesain.Views
         }
         async void MoveToProfil(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new ProfilPenyedia());
+            await Navigation.PushAsync(new ProfilPenyedia(username));
         }
         async void MoveToPekerjaanDiposting(object sender, EventArgs e)
         {

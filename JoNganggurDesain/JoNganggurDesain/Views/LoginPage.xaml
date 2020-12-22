@@ -71,7 +71,7 @@
                 WidthRequest="125"
                 HeightRequest="50"
                 BackgroundColor="#FD9500"
-                Command="{Binding LoginCommand}"/>
+                Clicked="SignInProcedure"/>
 
 
     </StackLayout>

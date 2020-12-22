@@ -1,4 +1,6 @@
-﻿using Plugin.Connectivity;
+﻿using Firebase.Database;
+using JoNganggurDesain.ViewModel;
+using Plugin.Connectivity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,11 +15,51 @@ namespace JoNganggurDesain.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ProfilPenyedia : ContentPage
     {
-        public ProfilPenyedia()
+        FirebaseClient firebase = new FirebaseClient("https://jonganggur-b20fe-default-rtdb.firebaseio.com/");
+        AdminPVM adminPVM;
+        public ProfilPenyedia(string username)
         {
+            Username = username;
+            Read();
             InitializeComponent();
+            adminPVM = new AdminPVM(username);
+            BindingContext = adminPVM;
             CheckConnectivity();
         }
+
+        private string username;
+        public string Username
+        {
+            get { return username; }
+            set
+            {
+                username = value;
+            }
+        }
+
+        public async void Read()
+        {
+            var person = await FirebaseHelperAdmin.GetPerusahaan(Username);
+            if (person != null)
+            {
+                if (person.Username == username)
+                {
+                    txtNama.Text = person.NamaP;
+                    txtUsername.Text = person.Username;
+                    txtPassword.Text = person.Password;
+                    txtAlamat.Text = person.Alamat;
+                    txtTentang.Text = person.Tentang;
+                }
+
+
+            }
+            else
+            {
+                await DisplayAlert("Success", "No Person Available", "OK");
+            }
+
+        }
+
         void CheckConnectivity()
         {
             CheckConnectivityOnStart();
@@ -51,7 +93,7 @@ namespace JoNganggurDesain.Views
         }
         async void MoveToEditProfilPenyedia(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new EditProfilPenyedia());
+            await Navigation.PushAsync(new EditProfilPenyedia(Username));
         }
     }
 }

@@ -26,16 +26,17 @@
                                    FontAttributes="Bold"
                                    RelativeLayout.XConstraint="30"
                                    RelativeLayout.YConstraint="250"/>
+                            
                             <Label Text="Nama Perusahaan" TextColor="#0D9876"/>
-                            <Entry Placeholder="Nama lengkap" IsReadOnly="False"/>
-                            <Label Text="Tentang Perusahaan" TextColor="#0D9876"/>
-                            <Editor Placeholder="Tentang Perusahaan" AutoSize="TextChanges" MaxLength="150" IsReadOnly="False" />
-                            <Label Text="Alamat" TextColor="#0D9876"/>
-                            <Editor Placeholder="Alamat" AutoSize="TextChanges" MaxLength="150" IsReadOnly="False" />
+                            <Entry x:Name="txtNama" Placeholder="Nama lengkap" />
                             <Label Text="Username" TextColor="#0D9876"/>
-                            <Entry Placeholder="Username" IsReadOnly="False" />
+                            <Entry x:Name="txtUsername" Placeholder="Username" />
                             <Label Text="Password" TextColor="#0D9876"/>
-                            <Entry Placeholder="Password" IsPassword="True" IsReadOnly="False" />
+                            <Entry x:Name="txtPassword" Placeholder="Password" IsPassword="True"  />
+                            <Label Text="Alamat" TextColor="#0D9876"/>
+                            <Editor x:Name="txtAlamat" Placeholder="Alamat" AutoSize="TextChanges" MaxLength="150"/>
+                            <Label Text="Tentang Perusahaan" TextColor="#0D9876"/>
+                            <Editor x:Name="txtTentang" Placeholder="Tentang Perusahaan" AutoSize="TextChanges" MaxLength="150"/>
 
                             <StackLayout Orientation="Horizontal" Spacing="20" HorizontalOptions="Center" Margin="0,20,0,20">
                                 <Button TextColor="White"
@@ -45,7 +46,8 @@
                                     BackgroundColor="#F84E29"   
                                     WidthRequest="120" 
                                     HeightRequest="50"
-                                    Clicked="UpdateProfilPenyedia"/>
+                                    Clicked="UpdateProfilPenyedia"
+                                    Command="{Binding UpdateCommand}"/>
                                 <Button TextColor="White"
                                     Text="BATAL"
                                     CornerRadius="15"

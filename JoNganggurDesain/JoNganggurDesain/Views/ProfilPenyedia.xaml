@@ -27,15 +27,16 @@
                                    RelativeLayout.XConstraint="30"
                                    RelativeLayout.YConstraint="250"/>
                             <Label Text="Nama Perusahaan" TextColor="#0D9876"/>
-                            <Entry Placeholder="Nama lengkap" IsReadOnly="True"/>
-                            <Label Text="Tentang Perusahaan" TextColor="#0D9876"/>
-                            <Editor Placeholder="Tentang Perusahaan" AutoSize="TextChanges" MaxLength="150" IsReadOnly="True" />
-                            <Label Text="Alamat" TextColor="#0D9876"/>
-                            <Editor Placeholder="Alamat" AutoSize="TextChanges" MaxLength="150" IsReadOnly="True" />
+                            <Entry x:Name="txtNama" Placeholder="Nama lengkap" IsReadOnly="True"/>                            
                             <Label Text="Username" TextColor="#0D9876"/>
-                            <Entry Placeholder="Username" IsReadOnly="True" />
+                            <Entry x:Name="txtUsername" Placeholder="Username" IsReadOnly="True" />
                             <Label Text="Password" TextColor="#0D9876"/>
-                            <Entry Placeholder="Password" IsPassword="True" IsReadOnly="True" />
+                            <Entry x:Name="txtPassword" Placeholder="Password" IsPassword="True" IsReadOnly="True" />
+                            <Label Text="Alamat" TextColor="#0D9876"/>
+                            <Editor x:Name="txtAlamat" Placeholder="Alamat" AutoSize="TextChanges" MaxLength="150" IsReadOnly="True" />
+                            <Label Text="Tentang Perusahaan" TextColor="#0D9876"/>
+                            <Editor x:Name="txtTentang" Placeholder="Tentang Perusahaan" AutoSize="TextChanges" MaxLength="150" IsReadOnly="True" />
+                            
 
                             <StackLayout Orientation="Horizontal" Spacing="20" HorizontalOptions="Center" Margin="0,20,0,20">
                                 <Button TextColor="White"

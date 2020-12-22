@@ -1,4 +1,5 @@
-﻿using System;
+﻿using JoNganggurDesain.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,17 +13,56 @@ namespace JoNganggurDesain.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class EditProfilPenyedia : ContentPage
     {
-        public EditProfilPenyedia()
+        AdminPVM adminPVM;
+        public EditProfilPenyedia(string username)
         {
+            Username = username;
+            Read();
             InitializeComponent();
+            adminPVM = new AdminPVM(username);
+            BindingContext = adminPVM;
         }
+
+        private string username;
+        public string Username
+        {
+            get { return username; }
+            set
+            {
+                username = value;
+            }
+        }
+
+        public async void Read()
+        {
+            var person = await FirebaseHelperAdmin.GetPerusahaan(Username);
+            if (person != null)
+            {
+                if (person.Username == username)
+                {
+                    txtNama.Text = person.NamaP;
+                    txtUsername.Text = person.Username;
+                    txtPassword.Text = person.Password;
+                    txtAlamat.Text = person.Alamat;
+                    txtTentang.Text = person.Tentang;
+                }
+
+
+            }
+            else
+            {
+                await DisplayAlert("Success", "No Person Available", "OK");
+            }
+
+        }
+
         async void MoveToProfilPenyedia(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new ProfilPenyedia());
+            await Navigation.PushAsync(new ProfilPenyedia(Username));
         }
         async void UpdateProfilPenyedia(object sender, EventArgs e)
         {
-            await DisplayAlert("Update", "Update Sukses", "Oke");
+            //await DisplayAlert("Update", "Update Sukses", "Oke");
         }
     }
 }
