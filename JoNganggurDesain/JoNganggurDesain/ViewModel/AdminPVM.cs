@@ -14,6 +14,15 @@ namespace JoNganggurDesain.ViewModel
         {
             Username = username2;
         }
+
+        private string namap;
+
+        public string NamaP
+        {
+            get { return namap; }
+            set { namap = value; }
+        }
+
         private string username;
 
         public string Username
@@ -33,14 +42,7 @@ namespace JoNganggurDesain.ViewModel
                 password = value;
                 PropertyChanged(this, new PropertyChangedEventArgs("Password"));
             }
-        }
-        private string namap;
-
-        public string NamaP
-        {
-            get { return namap; }
-            set { namap = value; }
-        }
+        }        
 
         private string alamat;
 
