@@ -28,15 +28,15 @@
                                    RelativeLayout.YConstraint="250"/>
                             
                             <Label Text="Nama Perusahaan" TextColor="#0D9876"/>
-                            <Entry x:Name="txtNama" Placeholder="Nama lengkap" />
+                            <Entry x:Name="txtNama" Text="{Binding NamaP}" Placeholder="Nama lengkap" />
                             <Label Text="Username" TextColor="#0D9876"/>
-                            <Entry x:Name="txtUsername" Placeholder="Username" />
+                            <Entry x:Name="txtUsername" Text="{Binding Username}" Placeholder="Username" />
                             <Label Text="Password" TextColor="#0D9876"/>
-                            <Entry x:Name="txtPassword" Placeholder="Password" IsPassword="True"  />
+                            <Entry x:Name="txtPassword" Text="{Binding Password}" Placeholder="Password" IsPassword="True"  />
                             <Label Text="Alamat" TextColor="#0D9876"/>
-                            <Editor x:Name="txtAlamat" Placeholder="Alamat" AutoSize="TextChanges" MaxLength="150"/>
+                            <Editor x:Name="txtAlamat" Text="{Binding Alamat}" Placeholder="Alamat" AutoSize="TextChanges" MaxLength="150"/>
                             <Label Text="Tentang Perusahaan" TextColor="#0D9876"/>
-                            <Editor x:Name="txtTentang" Placeholder="Tentang Perusahaan" AutoSize="TextChanges" MaxLength="150"/>
+                            <Editor x:Name="txtTentang" Text="{Binding Tentang}" Placeholder="Tentang Perusahaan" AutoSize="TextChanges" MaxLength="150"/>
 
                             <StackLayout Orientation="Horizontal" Spacing="20" HorizontalOptions="Center" Margin="0,20,0,20">
                                 <Button TextColor="White"
