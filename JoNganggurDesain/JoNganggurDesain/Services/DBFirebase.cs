@@ -53,7 +53,7 @@ namespace JoNganggurDesain.Services
                 .PostAsync(p);
         }
 
-        public async Task AddPekerjaan(string nama, int gaji, string syarat, string deskripsi)
+        public async Task AddPekerjaan(string nama, string gaji, string syarat, string deskripsi)
         {
             Pekerjaan p = new Pekerjaan()
             {

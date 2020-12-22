@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using JoNganggurDesain.ViewModel;
 
 namespace JoNganggurDesain.Views
 {
@@ -63,7 +64,7 @@ namespace JoNganggurDesain.Views
             if(Conn == true)
             {
                 await DisplayAlert("Pesan", "Berhasil memposting pekerjaan", "Oke");
-                await Navigation.PushAsync(new AdminP(Username));
+                //await Navigation.PushAsync(new AdminP(Username));
             } else
             {
                 await DisplayAlert("Peringatan", "Tidak ada sambungan internet", "Oke");
