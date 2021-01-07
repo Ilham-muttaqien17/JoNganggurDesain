@@ -1,4 +1,5 @@
-﻿using JoNganggurDesain.ViewModel;
+﻿using JoNganggurDesain.Services;
+using JoNganggurDesain.ViewModel;
 using Plugin.Connectivity;
 using System;
 using System.Collections.Generic;
@@ -8,15 +9,16 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using JoNganggurDesain.ViewModel;
 
 namespace JoNganggurDesain.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class PostingPekerjaan : ContentPage
     {
-        public PostingPekerjaan()
+        public PostingPekerjaan(string username)
         {
+            Username = username;
+            Test();
             InitializeComponent();
             CheckConnectivity();
             BindingContext = new PekerjaanViewModel();
@@ -30,6 +32,28 @@ namespace JoNganggurDesain.Views
                 username = value;
             }
         }
+
+        public async void Test()
+        {
+            var person = await FirebaseHelperAdmin.GetPerusahaan(Username);
+            if (person != null)
+            {
+                if (person.Username == username)
+                {
+                    idUser.Text = person.Username;
+                    namaPerusahaan.Text = person.NamaP;
+                    
+                }
+
+
+            }
+            else
+            {
+                await DisplayAlert("Success", "No Person Available", "OK");
+            }
+
+        }
+
         void CheckConnectivity()
         {
             CheckConnectivityOnStart();
@@ -64,7 +88,7 @@ namespace JoNganggurDesain.Views
             if(Conn == true)
             {
                 await DisplayAlert("Pesan", "Berhasil memposting pekerjaan", "Oke");
-                //await Navigation.PushAsync(new AdminP(Username));
+                await Navigation.PushAsync(new AdminP(Username));
             } else
             {
                 await DisplayAlert("Peringatan", "Tidak ada sambungan internet", "Oke");

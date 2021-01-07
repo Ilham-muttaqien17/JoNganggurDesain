@@ -64,7 +64,7 @@ namespace JoNganggurDesain.Views
         }
         async void MoveToPostingP(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new PostingPekerjaan());
+            await Navigation.PushAsync(new PostingPekerjaan(username));
         }
         async void MoveToLamaranM(object sender, EventArgs e)
         {

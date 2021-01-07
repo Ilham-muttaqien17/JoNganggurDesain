@@ -12,5 +12,7 @@ namespace JoNganggurDesain.Models
         public string Deskripsi { get; set; }
         public string id_Pelamar { get; set; }
         public string id_Penyedia { get; set; }
+        public string namaPerusahaan { get; set; }
+        public string namaPelamar { get; set; }
     }
 }

@@ -13,11 +13,23 @@ namespace JoNganggurDesain.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class NotifikasiPage : ContentPage
     {
-        public NotifikasiPage()
+        public NotifikasiPage(string username)
         {
+            Username = username;
             InitializeComponent();
             CheckConnectivity();
         }
+
+        private string username;
+        public string Username
+        {
+            get { return username; }
+            set
+            {
+                username = value;
+            }
+        }
+
         void CheckConnectivity()
         {
             CheckConnectivityOnStart();

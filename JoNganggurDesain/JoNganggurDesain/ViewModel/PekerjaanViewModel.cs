@@ -14,95 +14,40 @@ namespace JoNganggurDesain.ViewModel
 {
     public class PekerjaanViewModel : BaseViewModel
     {
-        private string username;
-        public string Username
-        {
-            get { return username; }
-            set
-            {
-                username = value;
+        public string Nama { get; set; }
+        public string Gaji { get; set; }
+        public string Syarat { get; set; }
+        public string Deskripsi { get; set; }
+        public string id_Pelamar { get; set; }
+        public string id_Penyedia { get; set; }
+        public string namaPerusahaan { get; set; }
+        public string namaPelamar { get; set; }
 
-            }
-        }
+        private DBFirebase services;
 
-        private string nama;
-        public string Nama
-        {
-            get { return nama; }
-            set
-            {
-                nama = value;
-            
-            }
-        }
-        private string gaji;
-        public string Gaji
-        {
-            get { return gaji; }
-            set
-            {
-                gaji = value;
-                
-            }
-        }
-        private string deskripsi;
-
-        public string Deskripsi
-        {
-            get { return deskripsi; }
-            set
-            {
-                deskripsi = value;
-                
-            }
-        }
-        private string syarat;
-
-        public string Syarat
-        {
-            get { return syarat; }
-            set
-            {
-                syarat = value;
-
-            }
-        }
-
-
-        public Command AddPekerjaanCommand
+        public Command AddPekerjaanCommand { get; }
+        private ObservableCollection<Pekerjaan> _pekerjaan = new ObservableCollection<Pekerjaan>();
+        public ObservableCollection<Pekerjaan> Pekerjaan
         {
             get
             {
-                return new Command(() =>
-                {
-                    PostingPekerjaan();
-                });
+                return _pekerjaan;
+            }
+            set
+            {
+                _pekerjaan = value;
+                OnPropertyChanged();
             }
         }
-       
-        private async void PostingPekerjaan()
+        public PekerjaanViewModel()
         {
-            //null or empty field validation, check weather email and password is null or empty    
-
-            if (string.IsNullOrEmpty(Nama) || string.IsNullOrEmpty(Gaji) ||
-                string.IsNullOrEmpty(Deskripsi) || string.IsNullOrEmpty(Syarat))
-                await App.Current.MainPage.DisplayAlert("Peringatan", "Harap isi semua data!", "OK");
-            else
-            {
-                //call AddUser function which we define in Firebase helper class    
-                var user = await FirebaseHelperPekerjaan.AddPekerjaan(Nama, Gaji, Deskripsi, Syarat);
-                //AddUser return true if data insert successfuly     
-                if (user)
-                {
-                    await App.Current.MainPage.DisplayAlert("Daftar Sukses", "", "Ok");
-                    //Navigate to Wellcom page after successfuly SignUp    
-                    //pass user email to welcom page    
-                    await App.Current.MainPage.Navigation.PushAsync(new AdminP(Username));
-                }
-                else
-                    await App.Current.MainPage.DisplayAlert("Error", "Daftar Gagal", "OK");
-
-            }
+            services = new DBFirebase();
+            Pekerjaan = services.getPekerjaan();
+            AddPekerjaanCommand = new Command(async () => await addPekerjaanAsync(Nama, Gaji, Syarat, Deskripsi, id_Penyedia, namaPerusahaan));
+        }
+        public async Task addPekerjaanAsync(string Nama, string Gaji, string Syarat, string Deskripsi, string id_penyedia, string namaPerusahaan)
+        {
+            await services.AddPekerjaan(Nama, Gaji, Syarat, Deskripsi, id_penyedia, namaPerusahaan);
         }
     }
 }

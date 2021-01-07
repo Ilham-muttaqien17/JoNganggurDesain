@@ -13,22 +13,7 @@ namespace JoNganggurDesain.ViewModel
     public class FirebaseHelperPekerjaan
     {
         public static FirebaseClient firebase = new FirebaseClient("https://jonganggur-b20fe-default-rtdb.firebaseio.com/");
-        public static async Task<List<Pekerjaan>> GetAdminKey()
-        {
-            try
-            {
-                var adminKey = (await firebase
-                    .Child("Perusahaan")
-                    .Child(adminKey.Key));
-                return adminKey;
-            }
-            catch(Exception e)
-            {
-                Debug.WriteLine($"Error:{e}");
-                return null;
-            }
 
-        }
         //Read All Perusahaan
         public static async Task<List<Pekerjaan>> GetAllPekerjaan()
         {

@@ -66,12 +66,12 @@ namespace JoNganggurDesain.Views
 
         async void Rekomendasi1(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new DetailPage());
+            await Navigation.PushAsync(new DetailPage(Username));
         }
 
         async void Rekomendasi2(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new DetailPage());
+            await Navigation.PushAsync(new DetailPage(Username));
         }
 
         void MoveToLokasi(object sender, EventArgs e)
@@ -86,17 +86,17 @@ namespace JoNganggurDesain.Views
 
         async void MoveToNotifikasi(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new NotifikasiPage());
+            await Navigation.PushAsync(new NotifikasiPage(Username));
         }
 
         async void MoveToTerbaru(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new TerbaruPage());
+            await Navigation.PushAsync(new TerbaruPage(Username));
         }
 
         async void MoveToRiwayat(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new RiwayatPage());
+            await Navigation.PushAsync(new RiwayatPage(Username));
         }
 
         async void MoveToProfile(object sender, EventArgs e)

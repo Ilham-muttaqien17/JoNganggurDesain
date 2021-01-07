@@ -41,7 +41,6 @@ namespace JoNganggurDesain.Views
                 if (person.Username == username)
                 {
                     txtNama.Text = person.Nama;
-                    txtUsername.Text = person.Username;
                     txtPassword.Text = person.Password;
                     dateTglLahir.Date = person.Tgl_lahir;
                     txtEmail.Text = person.Email;

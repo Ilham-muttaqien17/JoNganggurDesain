@@ -13,10 +13,21 @@ namespace JoNganggurDesain.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class DetailPage : ContentPage
     {
-        public DetailPage()
+        public DetailPage(string username)
         {
+            Username = username;
             InitializeComponent();
             CheckConnectivity();
+        }
+
+        private string username;
+        public string Username
+        {
+            get { return username; }
+            set
+            {
+                username = value;
+            }
         }
 
         void CheckConnectivity()
@@ -45,6 +56,16 @@ namespace JoNganggurDesain.Views
                     DisplayAlert("Message", "Tidak ada sambungan internet", "Oke");
                 }
             };
+        }
+
+        async void LamarProcedure(object sender, EventArgs e)
+        {
+            var result = await DisplayAlert("Konfirmasi", "Apakah Anda yakin ingin melamar?", "Ya", "Tidak");
+            if (result)
+            {
+                await this.DisplayAlert("Pesan", "Lamaran berhasil dikirim", "Oke");
+                await this.Navigation.PopAsync();
+            }
         }
     }
 }

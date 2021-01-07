@@ -26,8 +26,6 @@
                                    RelativeLayout.YConstraint="250"/>
                             <Label Text="Nama Lengkap" TextColor="#0D9876"/>
                             <Entry x:Name="txtNama" Text="{Binding Nama}" Placeholder="Nama lengkap" />
-                            <Label Text="Username" TextColor="#0D9876"/>
-                            <Entry x:Name="txtUsername" Text="{Binding Username}" Placeholder="Username" />
                             <Label Text="Password" TextColor="#0D9876"/>
                             <Entry x:Name="txtPassword" Text="{Binding Password}" Placeholder="Password" IsPassword="True" />
                             <Label Text="Tanggal lahir" TextColor="#0D9876"/>

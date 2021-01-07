@@ -13,10 +13,21 @@ namespace JoNganggurDesain.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class RiwayatPage : ContentPage
     {
-        public RiwayatPage()
+        public RiwayatPage(string username)
         {
+            Username = username;
             InitializeComponent();
             CheckConnectivity();
+        }
+
+        private string username;
+        public string Username
+        {
+            get { return username; }
+            set
+            {
+                username = value;
+            }
         }
 
         void CheckConnectivity()
@@ -54,12 +65,12 @@ namespace JoNganggurDesain.Views
 
         async void MoveToDashboard(object sender, EventArgs e)
         {
-            //await Navigation.PushAsync(new Dashboard(Username));
+            await Navigation.PushAsync(new Dashboard(Username));
         }
 
         async void MoveToProfile(object sender, EventArgs e)
         {
-            //await Navigation.PushAsync(new Profile());
+            await Navigation.PushAsync(new Profile(Username));
         }
     }
 }

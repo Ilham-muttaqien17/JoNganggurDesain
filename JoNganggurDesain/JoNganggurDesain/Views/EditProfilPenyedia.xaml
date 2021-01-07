@@ -29,8 +29,6 @@
                             
                             <Label Text="Nama Perusahaan" TextColor="#0D9876"/>
                             <Entry x:Name="txtNama" Text="{Binding NamaP}" Placeholder="Nama lengkap" />
-                            <Label Text="Username" TextColor="#0D9876"/>
-                            <Entry x:Name="txtUsername" Text="{Binding Username}" Placeholder="Username" />
                             <Label Text="Password" TextColor="#0D9876"/>
                             <Entry x:Name="txtPassword" Text="{Binding Password}" Placeholder="Password" IsPassword="True"  />
                             <Label Text="Alamat" TextColor="#0D9876"/>

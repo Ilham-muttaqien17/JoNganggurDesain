@@ -14,7 +14,7 @@ namespace JoNganggurDesain.Services
         FirebaseClient client;
         public DBFirebase()
         {
-            client = new FirebaseClient("https://testjonganggurdatabase-default-rtdb.firebaseio.com/");
+            client = new FirebaseClient("https://jonganggur-b20fe-default-rtdb.firebaseio.com/");
         }
         public ObservableCollection<Pelamar> getPelamar()
         {
@@ -53,14 +53,16 @@ namespace JoNganggurDesain.Services
                 .PostAsync(p);
         }
 
-        public async Task AddPekerjaan(string nama, string gaji, string syarat, string deskripsi)
+        public async Task AddPekerjaan(string nama, string gaji, string syarat, string deskripsi, string id_penyedia, string namaPerusahaan)
         {
             Pekerjaan p = new Pekerjaan()
             {
                 Nama = nama,
                 Gaji = gaji,
                 Syarat = syarat,
-                Deskripsi = deskripsi
+                Deskripsi = deskripsi,
+                id_Penyedia = id_penyedia,
+                namaPerusahaan = namaPerusahaan
             };
             await client
                 .Child("Pekerjaan")

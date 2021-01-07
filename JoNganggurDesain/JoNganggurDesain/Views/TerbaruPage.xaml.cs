@@ -14,11 +14,22 @@ namespace JoNganggurDesain.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class TerbaruPage : ContentPage
     {
-        public TerbaruPage()
+        public TerbaruPage(string username)
         {
+            Username = username;
             InitializeComponent();
             BindingContext = new PekerjaanViewModel();
             CheckConnectivity();
+        }
+
+        private string username;
+        public string Username
+        {
+            get { return username; }
+            set
+            {
+                username = value;
+            }
         }
 
         void CheckConnectivity()
@@ -50,7 +61,7 @@ namespace JoNganggurDesain.Views
         }
         async void MoveToDetail(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new DetailPage());
+            await Navigation.PushAsync(new DetailPage(Username));
         }
     }
 }

@@ -4,6 +4,7 @@
              x:Class="JoNganggurDesain.Views.PostingPekerjaan"
              NavigationPage.HasNavigationBar="false">
     <Grid>
+        <ScrollView>
         <StackLayout BackgroundColor="#169CC3">
 
             <StackLayout Margin="30,20,30,20">
@@ -12,15 +13,20 @@
                        Margin="10,10,10,20"
                            CornerRadius="20"
                            WidthRequest="350"
-                           HeightRequest="530">
+                           HeightRequest="600">
 
                     <StackLayout>
                         <Label Text="Tambah Pekerjaan"
+                               Margin="0,0,0,20"
                                        TextColor="Black"
                                        FontSize="Large"
                                        FontAttributes="Bold"
                                        RelativeLayout.XConstraint="30"
                                        RelativeLayout.YConstraint="250"/>
+                        <Label Text="Nama Perusahaan" TextColor="#0D9876"/>
+                        <Entry x:Name="namaPerusahaan" Text="{Binding namaPerusahaan}" IsReadOnly="True"/>
+                        <Label Text="Username Perusahaan" TextColor="#0D9876"/>
+                        <Entry x:Name="idUser" Text="{Binding id_Penyedia}" IsReadOnly="True"/>
                         <Label Text="Nama Pekerjaan" TextColor="#0D9876"/>
                         <Entry Text="{Binding Nama}" Placeholder="Nama Pekerjaan" />
                         <Label Text="Gaji" TextColor="#0D9876"/>
@@ -44,6 +50,6 @@
                         Clicked="postingPekerjaan"/>
              </StackLayout>
         </StackLayout>
-        
+        </ScrollView>
     </Grid>
 </ContentPage>
